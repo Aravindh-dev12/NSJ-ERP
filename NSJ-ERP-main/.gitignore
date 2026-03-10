@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+.next/
+.pnpm-store/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Database
+*.sqlite3
+db.sqlite3
+
+# Media files
+media/
+
+# Logs
+*.log
+crash_log.txt
+error_trace.txt
+
+# PDF test files
+test_*.pdf
+verify_*.pdf
+
+# Temporary files
+temp/
+*.tmp
