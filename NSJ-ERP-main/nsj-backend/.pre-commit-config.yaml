@@ -1,0 +1,8 @@
+repos:
+  - repo: local
+    hooks:
+      - id: make-pre-commit
+        name: Run make pre-commit
+        entry: make pre-commit
+        language: system
+        pass_filenames: false

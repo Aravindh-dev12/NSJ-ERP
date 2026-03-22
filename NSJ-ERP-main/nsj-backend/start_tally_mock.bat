@@ -1,0 +1,3 @@
+@echo off
+echo Starting Tally Mock Server...
+python tally_mock_server.py

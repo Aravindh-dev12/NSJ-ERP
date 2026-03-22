@@ -1,0 +1,85 @@
+[project]
+name = "nsj-backend"
+version = "0.1.0"
+description = "Django backend for Nitip Shah Jewels"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Proprietary" }
+authors = [
+    { name = "Nitip Shah Jewels" }
+]
+dependencies = [
+    "asgiref==3.10.0",
+    "Django==5.2.7",
+    "django-cors-headers==4.9.0",
+    "djangorestframework==3.16.1",
+    "djangorestframework-simplejwt==5.3.1",
+    "python-dotenv==1.0.1",
+    "psycopg2-binary==2.9.11",
+    "sqlparse==0.5.3",
+    "tzdata==2025.2",
+    "openpyxl>=3.1.5",
+    "reportlab>=4.4.5",
+    "dj-database-url>=3.1.0",
+    "whitenoise>=6.6.0",
+]
+
+[dependency-groups]
+dev = [
+    "coverage[toml]>=7.6.0,<8",
+    "pre-commit>=3.7.0,<4",
+    "pytest>=8.3.0,<9",
+    "pytest-django>=4.10.0,<5",
+    "pytest-cov>=6.0.0,<7",
+    "ruff>=0.6.0,<1",
+    "hypothesis>=6.100.0,<7",
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "nsj_backend.settings"
+python_files = ["tests.py", "test_*.py", "*_tests.py"]
+addopts = "--ignore=test_setup.py"
+
+[tool.coverage.run]
+branch = true
+source = ["accounts", "core", "products", "rates", "users", "nsj_backend", "sales_queries", "tasks", "issues", "vouchers"]
+omit = [
+    "*/management/commands/*",
+    "*/migrations/*",
+    "*/tests/*",
+    "*/test_*.py",
+    "*_tests.py",
+    "*/asgi.py",
+    "*/wsgi.py",
+    "*/__init__.py",
+    "manage.py",
+    "setup_verification.py",
+    "demo_tally_workflow.py",
+    "tally_*.py",
+    "test_*.py",
+    "*/email_utils.py",
+    "*/estimate_pdf.py",
+    "*/estimate_landscape_pdf.py",
+    "*/sales_pdf.py",
+    "*/test_pdf_generation.py",
+]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+# Ignore E402 (module level import not at top of file) in specific files
+# These files use late imports intentionally to avoid circular imports
+per-file-ignores = { "vouchers/views.py" = ["E402"], "vouchers/serializers.py" = ["E402"], "tests/test_queries.py" = ["E402"], "tests/test_order_issues.py" = ["F811"], "nsj_backend/settings.py" = ["E402"], "nsj_backend/settings_railway.py" = ["F403", "F405"], "nsj_backend/urls.py" = ["E402"], "setup_verification.py" = ["E402"], "test_daily_report_cta.py" = ["E402"], "test_daily_report_email.py" = ["E402"], "test_email.py" = ["E402"] }
+
+[tool.uv]
+package = false
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

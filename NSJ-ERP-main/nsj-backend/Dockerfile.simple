@@ -1,0 +1,45 @@
+# Simplified Dockerfile for Railway
+FROM python:3.11-slim
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    DJANGO_SETTINGS_MODULE=nsj_backend.settings
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    libpq-dev \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Install Python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt gunicorn
+
+# Copy application code
+COPY . .
+
+# Create start script
+RUN echo '#!/bin/bash\n\
+set -e\n\
+echo "Running migrations..."\n\
+python manage.py migrate --noinput || echo "Migration failed, continuing..."\n\
+echo "Collecting static files..."\n\
+python manage.py collectstatic --noinput || echo "Collectstatic failed, continuing..."\n\
+echo "Starting server..."\n\
+exec gunicorn nsj_backend.wsgi:application \\\n\
+    --bind 0.0.0.0:${PORT:-8000} \\\n\
+    --workers 2 \\\n\
+    --threads 2 \\\n\
+    --timeout 120 \\\n\
+    --access-logfile - \\\n\
+    --error-logfile - \\\n\
+    --log-level info\n\
+' > /app/start.sh && chmod +x /app/start.sh
+
+EXPOSE 8000
+
+CMD ["/app/start.sh"]

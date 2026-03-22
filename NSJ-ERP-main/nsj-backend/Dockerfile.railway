@@ -1,0 +1,80 @@
+# Optimized Railway Dockerfile for Django backend
+FROM python:3.11-slim
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    DJANGO_SETTINGS_MODULE=nsj_backend.settings \
+    PYTHONPATH=/app \
+    PORT=8000
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    libpq-dev \
+    curl \
+    fontconfig \
+    fonts-liberation \
+    fonts-dejavu-core \
+    fonts-freefont-ttf \
+    fonts-noto-core \
+    fonts-noto-ui-core \
+    && fc-cache -f -v \
+    && rm -rf /var/lib/apt/lists/* \
+    && apt-get clean
+
+WORKDIR /app
+
+# Copy and install Python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application code
+COPY . .
+
+# Create media and static directories
+RUN mkdir -p /app/media /app/staticfiles
+
+# Collect static files at build time
+RUN python manage.py collectstatic --noinput --clear || echo "Static files collection skipped"
+
+# Create optimized startup script
+RUN echo '#!/bin/bash\n\
+set -e\n\
+\n\
+echo "=== NSJ Backend Starting ==="\n\
+\n\
+# Quick database check\n\
+echo "Checking database connection..."\n\
+python manage.py check --database default || echo "Database check warning"\n\
+\n\
+# Run migrations (with timeout)\n\
+echo "Running migrations..."\n\
+timeout 60 python manage.py migrate --noinput || echo "Migration timeout or already applied"\n\
+\n\
+# Start server immediately\n\
+echo "Starting Gunicorn on 0.0.0.0:${PORT}..."\n\
+exec gunicorn nsj_backend.wsgi:application \\\n\
+    --bind 0.0.0.0:${PORT} \\\n\
+    --workers 2 \\\n\
+    --threads 4 \\\n\
+    --worker-class gthread \\\n\
+    --timeout 120 \\\n\
+    --graceful-timeout 30 \\\n\
+    --keep-alive 5 \\\n\
+    --max-requests 1000 \\\n\
+    --max-requests-jitter 50 \\\n\
+    --access-logfile - \\\n\
+    --error-logfile - \\\n\
+    --log-level info\n\
+' > /app/start.sh && chmod +x /app/start.sh
+
+# Expose port
+EXPOSE 8000
+
+# Health check with longer timeout
+HEALTHCHECK --interval=30s --timeout=10s --start-period=120s --retries=5 \
+    CMD curl -f http://localhost:${PORT}/api/health/ || exit 1
+
+# Start command
+CMD ["/app/start.sh"]

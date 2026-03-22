@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# Database
+# Note: db.sqlite3 is NOT excluded so we can deploy with pre-seeded data
+# *.sqlite3
+# db.sqlite3
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+*.md
+docs/
+
+# But keep db_export.json and db_backup.json for data migration
+!db_export.json
+!db_backup.json
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
