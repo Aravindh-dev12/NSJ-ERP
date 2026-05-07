@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Status Updated</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4;">
+    <table role="presentation" style="width: 100%; border-collapse: collapse; background-color: #f4f4f4;">
+        <tr>
+            <td style="padding: 40px 20px;">
+                <!-- Main Container -->
+                <table role="presentation" style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    
+                    <!-- Header -->
+                    <tr>
+                        <td style="background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%); padding: 40px 30px; text-align: center; border-radius: 8px 8px 0 0;">
+                            <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 600;">
+                                🔄 Task Status Updated
+                            </h1>
+                        </td>
+                    </tr>
+                    
+                    <!-- Content -->
+                    <tr>
+                        <td style="padding: 40px 30px;">
+                            <p style="margin: 0 0 20px; color: #333333; font-size: 16px; line-height: 1.6;">
+                                Hello,
+                            </p>
+                            
+                            <p style="margin: 0 0 30px; color: #333333; font-size: 16px; line-height: 1.6;">
+                                The status of task "<strong>{{ task_title }}</strong>" has been updated by <strong>{{ changed_by }}</strong>:
+                            </p>
+                            
+                            <!-- Status Change Card -->
+                            <table role="presentation" style="width: 100%; border-collapse: collapse; background-color: #f8f9fa; border-left: 4px solid #2196F3; border-radius: 4px; margin-bottom: 30px;">
+                                <tr>
+                                    <td style="padding: 25px;">
+                                        <!-- Status Change -->
+                                        <table role="presentation" style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                                            <tr>
+                                                <td style="text-align: center; padding: 15px; background-color: #ffffff; border-radius: 6px;">
+                                                    <div style="display: inline-block; margin: 0 10px;">
+                                                        <span style="display: inline-block; padding: 8px 16px; background-color: #ff9800; color: #ffffff; border-radius: 20px; font-size: 14px; font-weight: 600;">
+                                                            {{ old_status }}
+                                                        </span>
+                                                    </div>
+                                                    <div style="display: inline-block; margin: 0 10px; color: #2196F3; font-size: 24px;">
+                                                        →
+                                                    </div>
+                                                    <div style="display: inline-block; margin: 0 10px;">
+                                                        {{ new_status_badge|safe }}
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        
+                                        <!-- Change Details -->
+                                        <table role="presentation" style="width: 100%; border-collapse: collapse;">
+                                            <tr>
+                                                <td style="padding: 8px 0;">
+                                                    <span style="color: #888888; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;">Changed At</span>
+                                                    <p style="margin: 5px 0 0; color: #333333; font-size: 15px; font-weight: 600;">
+                                                        🕐 {{ changed_at }}
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <!-- Task Details -->
+                            <table role="presentation" style="width: 100%; border-collapse: collapse; background-color: #f8f9fa; border-radius: 4px; padding: 20px; margin-bottom: 30px;">
+                                <tr>
+                                    <td>
+                                        <h3 style="margin: 0 0 15px; color: #333333; font-size: 16px; font-weight: 600;">
+                                            Task Details
+                                        </h3>
+                                        <table role="presentation" style="width: 100%; border-collapse: collapse;">
+                                            <tr>
+                                                <td style="padding: 5px 0; color: #666666; font-size: 14px;">
+                                                    📅 Deadline: <strong style="color: #333333;">{{ deadline }}</strong>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 5px 0; color: #666666; font-size: 14px;">
+                                                    ⚡ Urgency: {{ urgency_badge|safe }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 5px 0; color: #666666; font-size: 14px;">
+                                                    🏢 Department: <strong style="color: #333333;">{{ department }}</strong>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <!-- CTA Button -->
+                            <table role="presentation" style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                                <tr>
+                                    <td style="text-align: center; padding: 20px 0;">
+                                        <a href="{{ task_url }}" style="display: inline-block; padding: 14px 40px; background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%); color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 16px; font-weight: 600; box-shadow: 0 4px 12px rgba(33, 150, 243, 0.4);">
+                                            View Task Details →
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <p style="margin: 0; color: #666666; font-size: 14px; line-height: 1.6; text-align: center;">
+                                Click the button above to view complete task details.
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background-color: #f8f9fa; padding: 30px; text-align: center; border-radius: 0 0 8px 8px; border-top: 1px solid #e9ecef;">
+                            <p style="margin: 0 0 10px; color: #888888; font-size: 13px;">
+                                This is an automated notification from NSJ ERP System
+                            </p>
+                            <p style="margin: 0; color: #888888; font-size: 13px;">
+                                Please do not reply to this email
+                            </p>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
