@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Load a decorative script font for the 'Niti' part of the logo. If you prefer a local font, replace this import
+  with a @font-face pointing to files in public/fonts. */
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Receipt header / print specific styles to match provided image */
+@layer components {
+  .receipt-header {
+    display: flex;
+    align-items: flex-start; /* top align right block */
+    justify-content: space-between;
+    height: 120px; /* fixed header height for print stability */
+    padding: 18px 36px;
+    box-sizing: border-box;
+    width: 100%;
+    background: white;
+  }
+
+  .receipt-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .receipt-logo {
+    height: 92px; /* larger logo height to match reference */
+    width: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  .receipt-tagline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-left: 12px;
+  }
+
+  .tagline-text {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #5a2d2d;
+    font-weight: 300;
+    font-family: Georgia, "Times New Roman", serif;
+  }
+
+  .tagline-rule {
+    height: 1px;
+    width: 140px;
+    background: #e6d9d9;
+    margin-top: 2px;
+  }
+
+  .receipt-right {
+    text-align: right;
+    color: #5a2d2d;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.15;
+    width: 320px; /* keep the right block narrow and top-right aligned */
+  }
+
+  .company-name {
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 2px;
+  }
+
+  .company-lines {
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  .company-contact {
+    color: #5a2d2d;
+    margin-left: 6px;
+  }
+
+  .icon-phone,
+  .icon-mail {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    margin-right: 6px;
+    display: inline-block;
+  }
+
+  /* Typographic fallback styles when image is not available */
+  .logo-text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .logo-text {
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    color: #5a2d2d;
+    font-size: 72px; /* larger to match reference */
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: 0.9;
+    margin-top: 4px;
+  }
+  .logo-script {
+    font-family: "Great Vibes", "Palatino Linotype", Georgia, serif;
+    font-size: 76px;
+    line-height: 0.9;
+    margin-right: 6px;
+    display: inline-block;
+    vertical-align: top;
+    color: #3e1f1f;
+  }
+  .logo-sans {
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-weight: 400;
+    font-size: 58px;
+    vertical-align: top;
+    color: #5a2d2d;
+    margin-left: 2px;
+  }
+  .logo-sub {
+    font-size: 12px;
+    color: #5a2d2d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-top: 6px;
+  }
+
+  /* shorten the horizontal rule to align like the reference */
+  .tagline-rule {
+    height: 1px;
+    width: 160px;
+    background: #e6d9d9;
+    margin-top: 6px;
+  }
+
+  .gst-block {
+    margin-top: 6px;
+    font-size: 11px;
+  }
+
+  /* Print rules: ensure header fixed size and margins for PDF/print */
+  @media print {
+    body {
+      margin: 0;
+      -webkit-print-color-adjust: exact;
+    }
+    .receipt-header {
+      height: 112px;
+      padding: 10px 28px;
+      page-break-after: avoid;
+    }
+    .receipt-logo {
+      height: 72px;
+    }
+    /* Hide interactive controls on print */
+    button,
+    .no-print {
+      display: none !important;
+    }
+    /* Prevent scaling */
+    * {
+      transform: none !important;
+    }
+  }
+}
+
+/* Mobile/iPad scrolling fixes */
+@layer base {
+  /* Enable smooth scrolling on touch devices */
+  html,
+  body {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+
+  /* Fix for iOS Safari scroll issues */
+  @supports (-webkit-touch-callout: none) {
+    body {
+      min-height: -webkit-fill-available;
+    }
+    html {
+      height: -webkit-fill-available;
+    }
+  }
+}
+
+@layer components {
+  /* Scrollable container for forms on mobile */
+  .mobile-scroll-container {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+    touch-action: pan-y;
+  }
+
+  /* Fix table horizontal scroll on mobile */
+  .table-scroll-container {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    touch-action: pan-x pan-y;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

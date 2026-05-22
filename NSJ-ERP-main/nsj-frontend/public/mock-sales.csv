@@ -1,0 +1,5 @@
+Invoice No,Invoice Date,Party Name,City,State,Product Category,Quantity,Net Amount,Sales Person Name
+INV-001,2025-06-01,ABC Labs,Mumbai,Maharashtra,Filters,10,5000,Rahul
+INV-002,2025-06-02,XYZ Chemicals,Delhi,Delhi,Thimbles,5,3000,Shishir
+INV-003,2025-06-03,LabTech,Bangalore,Karnataka,Filters,20,12000,Elumalai
+INV-004,2025-06-04,ABC Labs,Mumbai,Maharashtra,Thimbles,15,9000,Rahul
