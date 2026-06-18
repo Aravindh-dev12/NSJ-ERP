@@ -1,0 +1,911 @@
+
+> jsc-frontend@0.1.0 test
+> vitest run --run --coverage
+
+
+[1m[46m RUN [49m[22m [36mv3.2.4 [39m[90mC:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend[39m
+      [2mCoverage enabled with [22m[33mv8[39m
+
+[90mstdout[2m | tests/components/PaymentTracking.full.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/ExportColumnModal.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/payment/PaymentFilters.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/InvoiceUploadModal.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/pages/dashboard.kpi-values.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/pages/dashboard.bar-chart.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/DashboardKPIs.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/pages/dashboard.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/payment/PaymentTracking.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/DashboardRecentOrders.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/CompaniesCrud.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/CompaniesList.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/SidebarNav.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/pages/dashboard.recent-orders.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/Dashboard.integration.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/payment/ScheduleBuilder.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/admin/VendorManagement.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/AIChatOverlay.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/app/layout.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mdisplays user information
+[22m[39mMSW responding to /auth/me (regex)
+
+ [32m✓[39m tests/components/CompaniesList.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[33m 389[2mms[22m[39m
+[90mstdout[2m | tests/pages/dashboard.recent-orders.test.tsx[2m > [22m[2mDashboardPage Overview section[2m > [22m[2mrenders latest updates section with order info
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.kpi-values.test.tsx[2m > [22m[2mDashboardPage KPI card values[2m > [22m[2mdisplays trend percentages correctly
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.bar-chart.test.tsx[2m > [22m[2mDashboardPage monthly chart content[2m > [22m[2mdisplays orders legend
+[22m[39mMSW responding to /auth/me (regex)
+
+ [32m✓[39m tests/components/payment/PaymentFilters.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 679[2mms[22m[39m
+   [33m[2m✓[22m[39m PaymentFilters[2m > [22mcalls onFilterChange for all fields [33m 639[2mms[22m[39m
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mdisplays KPI values from API
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.recent-orders.test.tsx[2m > [22m[2mDashboardPage Overview section[2m > [22m[2mdisplays summary balances correctly
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.kpi-values.test.tsx[2m > [22m[2mDashboardPage KPI card values[2m > [22m[2mdisplays average order value
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.bar-chart.test.tsx[2m > [22m[2mDashboardPage monthly chart content[2m > [22m[2mdisplays chart values from API data
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mdisplays gold rate card with price
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.recent-orders.test.tsx[2m > [22m[2mDashboardPage Overview section[2m > [22m[2mrenders export button in overview
+[22m[39mMSW responding to /auth/me (regex)
+
+ [32m✓[39m tests/pages/dashboard.kpi-values.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 671[2mms[22m[39m
+   [33m[2m✓[22m[39m DashboardPage KPI card values[2m > [22mrenders correct values in KPI cards [33m 418[2mms[22m[39m
+[90mstdout[2m | tests/pages/dashboard.bar-chart.test.tsx[2m > [22m[2mDashboardPage monthly chart content[2m > [22m[2mdisplays export button
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.recent-orders.test.tsx[2m > [22m[2mDashboardPage Overview section[2m > [22m[2mdisplays orders legend in chart
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mdisplays overview section with chart
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstderr[2m | tests/components/payment/ScheduleBuilder.test.tsx[2m > [22m[2mScheduleBuilder[2m > [22m[2msubmits the form and closes
+[22m[39mWarning: Received NaN for the `value` attribute. If this is expected, cast the value to a string.
+    at input
+    at div
+    at div
+    at form
+    at div
+    at div
+    at ScheduleBuilder (C:\Users\Aryan\OneDrive\Desktop\nsj\nsj-frontend\nsj-frontend\components\payment\ScheduleBuilder.tsx:9:3)
+
+ [32m✓[39m tests/pages/dashboard.bar-chart.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 650[2mms[22m[39m
+   [33m[2m✓[22m[39m DashboardPage monthly chart content[2m > [22mrenders monthly chart with correct data and labels [33m 361[2mms[22m[39m
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mdisplays latest updates section
+[22m[39mMSW responding to /auth/me (regex)
+
+ [32m✓[39m tests/pages/dashboard.recent-orders.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 663[2mms[22m[39m
+   [33m[2m✓[22m[39m DashboardPage Overview section[2m > [22mrenders overview section with monthly chart [33m 315[2mms[22m[39m
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mdisplays monthly chart data
+[22m[39mMSW responding to /auth/me (regex)
+
+ [32m✓[39m tests/components/AIChatOverlay.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[33m 684[2mms[22m[39m
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mshows trend percentage in KPI cards
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/Dashboard.integration.test.tsx[2m > [22m[2mDashboardPage Backend Integration[2m > [22m[2mrenders overview section with chart
+[22m[39mMSW responding to /auth/me (regex)
+
+ [32m✓[39m tests/components/ExportColumnModal.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[33m 814[2mms[22m[39m
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mhandles API error gracefully with fallback values
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/Dashboard.integration.test.tsx[2m > [22m[2mDashboardPage Backend Integration[2m > [22m[2mdisplays trend percentages
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstderr[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mhandles API error gracefully with fallback values
+[22m[39mFailed to fetch dashboard stats: TypeError: Failed to fetch
+    at createNetworkError [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/interceptors/fetch/utils/createNetworkError.ts:2:24[90m)[39m
+    at Object.respondWith [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/interceptors/fetch/index.ts:108:36[90m)[39m
+    at _RequestController.respondWith [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/RequestController.ts:83:17[90m)[39m
+    at _Emitter.<anonymous> [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4mmsw[24m/src/node/SetupServerCommonApi.ts:94:22[90m)[39m
+    at emitAsync [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/utils/emitAsync.ts:23:5[90m)[39m
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/utils/handleRequest.ts:123:5
+    at until [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@open-draft[24m/until/src/until.ts:23:18[90m)[39m
+    at handleRequest [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/utils/handleRequest.ts:112:18[90m)[39m
+    at globalThis.fetch [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/interceptors/fetch/index.ts:185:7[90m)[39m
+    at fetchStats [90m(C:\Users\Aryan\OneDrive\Desktop\nsj\nsj-frontend\nsj-frontend\[39mcomponents\DashboardShell.tsx:66:26[90m)[39m {
+  cause: Response {
+    status: [33m0[39m,
+    statusText: [32m''[39m,
+    headers: Headers {},
+    body: [1mnull[22m,
+    bodyUsed: [33mfalse[39m,
+    ok: [33mfalse[39m,
+    redirected: [33mfalse[39m,
+    type: [32m'error'[39m,
+    url: [32m''[39m
+  }
+}
+
+ [32m✓[39m tests/components/DashboardKPIs.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[33m 896[2mms[22m[39m
+[90mstderr[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mhandles API error gracefully with fallback values
+[22m[39mFailed to fetch gold rate: TypeError: Failed to fetch
+    at createNetworkError [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/interceptors/fetch/utils/createNetworkError.ts:2:24[90m)[39m
+    at Object.respondWith [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/interceptors/fetch/index.ts:108:36[90m)[39m
+    at _RequestController.respondWith [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/RequestController.ts:83:17[90m)[39m
+    at _Emitter.<anonymous> [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4mmsw[24m/src/node/SetupServerCommonApi.ts:94:22[90m)[39m
+    at emitAsync [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/utils/emitAsync.ts:23:5[90m)[39m
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/utils/handleRequest.ts:123:5
+    at until [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@open-draft[24m/until/src/until.ts:23:18[90m)[39m
+    at handleRequest [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/utils/handleRequest.ts:112:18[90m)[39m
+    at globalThis.fetch [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/interceptors/fetch/index.ts:185:7[90m)[39m
+    at fetchGoldRate [90m(C:\Users\Aryan\OneDrive\Desktop\nsj\nsj-frontend\nsj-frontend\[39mcomponents\DashboardShell.tsx:88:26[90m)[39m {
+  cause: Response {
+    status: [33m0[39m,
+    statusText: [32m''[39m,
+    headers: Headers {},
+    body: [1mnull[22m,
+    bodyUsed: [33mfalse[39m,
+    ok: [33mfalse[39m,
+    redirected: [33mfalse[39m,
+    type: [32m'error'[39m,
+    url: [32m''[39m
+  }
+}
+
+ [32m✓[39m tests/components/CompaniesCrud.test.tsx [2m([22m[2m14 tests[22m[2m)[22m[33m 1065[2mms[22m[39m
+ [32m✓[39m tests/Dashboard.integration.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 897[2mms[22m[39m
+   [33m[2m✓[22m[39m DashboardPage Backend Integration[2m > [22mrenders KPIs from backend mock [33m 501[2mms[22m[39m
+   [33m[2m✓[22m[39m DashboardPage Backend Integration[2m > [22mrenders overview section with chart [33m 315[2mms[22m[39m
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mdisplays summary balances in overview
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mrenders user initials avatar
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mdisplays gold rate change percentage
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mshows correct badge colors for positive trends
+[22m[39mMSW responding to /auth/me (regex)
+
+ [32m✓[39m tests/components/PaymentTracking.full.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1250[2mms[22m[39m
+   [33m[2m✓[22m[39m PaymentTracking (full)[2m > [22mfilters by search, status, month, and party [33m 857[2mms[22m[39m
+ [32m✓[39m tests/components/admin/VendorManagement.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 932[2mms[22m[39m
+   [33m[2m✓[22m[39m VendorManagement[2m > [22mtoggles vendor status when status button is clicked [33m 411[2mms[22m[39m
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mhandles zero values correctly
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mdisplays orders legend in chart section
+[22m[39mMSW responding to /auth/me (regex)
+
+ [32m✓[39m tests/pages/dashboard.test.tsx [2m([22m[2m15 tests[22m[2m)[22m[33m 1182[2mms[22m[39m
+   [33m[2m✓[22m[39m DashboardPage[2m > [22mdisplays user information [33m 331[2mms[22m[39m
+ [32m✓[39m tests/components/DashboardRecentOrders.test.tsx [2m([22m[2m15 tests[22m[2m)[22m[33m 707[2mms[22m[39m
+ [32m✓[39m tests/components/SidebarNav.test.tsx [2m([22m[2m21 tests[22m[2m)[22m[33m 1567[2mms[22m[39m
+[90mstdout[2m | tests/app/layout.test.tsx[2m > [22m[2mRootLayout[2m > [22m[2mrenders Toaster and children
+[22m[39mMSW responding to /auth/me (regex)
+
+ [32m✓[39m tests/components/payment/PaymentTracking.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1461[2mms[22m[39m
+   [33m[2m✓[22m[39m PaymentTracking[2m > [22mupdates filters when inputs change [33m 1180[2mms[22m[39m
+ [32m✓[39m tests/app/layout.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 326[2mms[22m[39m
+[90mstdout[2m | tests/components/payment/ScheduleBuilder.test.tsx[2m > [22m[2mScheduleBuilder[2m > [22m[2msubmits the form and closes
+[22m[39mSchedule created: {
+  cadence_days: [33m10[39m,
+  start_datetime: [32m''[39m,
+  grace_days: [33m5[39m,
+  channels: { email: [33mtrue[39m, whatsapp: [33mtrue[39m },
+  send_window_start: [32m'08:00'[39m,
+  send_window_end: [32m'18:00'[39m,
+  escalation_threshold_days: [33m21[39m,
+  escalation_stakeholder_ids: [],
+  template_id: [32m''[39m,
+  test_recipient: [32m'test@demo.com'[39m
+}
+
+ [32m✓[39m tests/components/payment/ScheduleBuilder.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 2718[2mms[22m[39m
+   [33m[2m✓[22m[39m ScheduleBuilder[2m > [22mrenders form and calls onClose when close button is clicked [33m 551[2mms[22m[39m
+   [33m[2m✓[22m[39m ScheduleBuilder[2m > [22msubmits the form and closes [33m 2162[2mms[22m[39m
+ [32m✓[39m tests/components/InvoiceUploadModal.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[33m 3346[2mms[22m[39m
+   [33m[2m✓[22m[39m InvoiceUploadModal[2m > [22mrejects files that are too large [33m 874[2mms[22m[39m
+   [33m[2m✓[22m[39m InvoiceUploadModal[2m > [22mhandles successful upload [33m 2244[2mms[22m[39m
+[90mstdout[2m | tests/components/ui/toaster.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/lib/generated_frontend_tests.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/queries/PendingQueriesList.full.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/AIChatOverlay.full.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/ui/toast.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/pages/login.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/admin/ReminderSettings.full.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/queries/ArchivedQueriesList.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/AuditLog.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/AIChatOverlay.full.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[33m 337[2mms[22m[39m
+[90mstdout[2m | tests/components/admin/InvoiceManagement.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/lib/auth.context.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/ui/toaster.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 411[2mms[22m[39m
+[90mstdout[2m | tests/components/admin/AuditLog.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/queries/PendingQueriesList.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/queries/PendingQueriesList.full.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[33m 872[2mms[22m[39m
+[90mstderr[2m | tests/lib/auth.context.test.tsx[2m > [22m[2mauth.tsx context and flows[2m > [22m[2mthrows if useAuth is called outside provider
+[22m[39mWarning: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem.
+
+[90mstdout[2m | tests/pages/logout.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/lib/auth.context.test.tsx[2m > [22m[2mauth.tsx context and flows[2m > [22m[2mrenders AuthProvider and exposes context (loading state)
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/components/payment/BulkActions.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/ui/toast.test.tsx [2m([22m[2m13 tests[22m[2m)[22m[33m 1766[2mms[22m[39m
+   [33m[2m✓[22m[39m Toast components[2m > [22mrenders Toast with default variant [33m 365[2mms[22m[39m
+[90mstdout[2m | tests/lib/auth.context.test.tsx[2m > [22m[2mauth.tsx context and flows[2m > [22m[2mlogin and logout update user state (integration)
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/components/payment/PaymentTable.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/lib/auth.context.test.tsx[2m > [22m[2mauth.tsx context and flows[2m > [22m[2mlogin and logout update user state (integration)
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/components/queries/ArchivedQueriesList.full.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/lib/auth.context.test.tsx[2m > [22m[2mauth.tsx context and flows[2m > [22m[2mlogin and logout update user state (integration)
+[22m[39mMSW responding to /auth/logout (regex)
+
+[90mstderr[2m | tests/components/queries/ArchivedQueriesList.test.tsx[2m > [22m[2mArchivedQueriesList[2m > [22m[2mhandles API error gracefully
+[22m[39mFailed to load archived queries: Error: API Error
+    at [90mC:\Users\Aryan\OneDrive\Desktop\nsj\nsj-frontend\nsj-frontend\[39mtests\components\queries\ArchivedQueriesList.test.tsx:87:42
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+    at runSuite [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1729:8[90m)[39m
+    at runSuite [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1729:8[90m)[39m
+    at runFiles [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1787:3[90m)[39m
+
+[90mstderr[2m | tests/components/queries/ArchivedQueriesList.test.tsx[2m > [22m[2mArchivedQueriesList[2m > [22m[2mhandles API error gracefully
+[22m[39mFailed to load archived queries: Error: API Error
+    at [90mC:\Users\Aryan\OneDrive\Desktop\nsj\nsj-frontend\nsj-frontend\[39mtests\components\queries\ArchivedQueriesList.test.tsx:87:42
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+    at runSuite [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1729:8[90m)[39m
+    at runSuite [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1729:8[90m)[39m
+    at runFiles [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1787:3[90m)[39m
+
+ [32m✓[39m tests/lib/auth.context.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 898[2mms[22m[39m
+   [33m[2m✓[22m[39m auth.tsx context and flows[2m > [22mrenders AuthProvider and exposes context (loading state) [33m 488[2mms[22m[39m
+   [33m[2m✓[22m[39m auth.tsx context and flows[2m > [22mlogin and logout update user state (integration) [33m 330[2mms[22m[39m
+ [32m✓[39m tests/components/admin/InvoiceManagement.test.tsx [2m([22m[2m1 test[22m[2m)[22m[33m 703[2mms[22m[39m
+   [33m[2m✓[22m[39m InvoiceManagement[2m > [22mrenders without crashing [33m 663[2mms[22m[39m
+ [32m✓[39m tests/components/queries/ArchivedQueriesList.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 726[2mms[22m[39m
+   [33m[2m✓[22m[39m ArchivedQueriesList[2m > [22mrenders archived queries list [33m 350[2mms[22m[39m
+[90mstderr[2m | tests/components/queries/PendingQueriesList.test.tsx[2m > [22m[2mPendingQueriesList[2m > [22m[2mhandles API error gracefully
+[22m[39mFailed to load queries: Error: API Error
+    at [90mC:\Users\Aryan\OneDrive\Desktop\nsj\nsj-frontend\nsj-frontend\[39mtests\components\queries\PendingQueriesList.test.tsx:87:42
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+    at runSuite [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1729:8[90m)[39m
+    at runSuite [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1729:8[90m)[39m
+    at runFiles [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1787:3[90m)[39m
+Failed to load queries: Error: API Error
+    at [90mC:\Users\Aryan\OneDrive\Desktop\nsj\nsj-frontend\nsj-frontend\[39mtests\components\queries\PendingQueriesList.test.tsx:87:42
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+    at runSuite [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1729:8[90m)[39m
+    at runSuite [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1729:8[90m)[39m
+    at runFiles [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1787:3[90m)[39m
+
+[90mstderr[2m | tests/components/queries/PendingQueriesList.test.tsx[2m > [22m[2mPendingQueriesList[2m > [22m[2mhandles API error gracefully
+[22m[39mFailed to load queries: Error: API Error
+    at [90mC:\Users\Aryan\OneDrive\Desktop\nsj\nsj-frontend\nsj-frontend\[39mtests\components\queries\PendingQueriesList.test.tsx:87:42
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+    at runSuite [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1729:8[90m)[39m
+    at runSuite [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1729:8[90m)[39m
+    at runFiles [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1787:3[90m)[39m
+
+ [32m✓[39m tests/components/queries/PendingQueriesList.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 861[2mms[22m[39m
+   [33m[2m✓[22m[39m PendingQueriesList[2m > [22mrenders pending queries list [33m 402[2mms[22m[39m
+ [32m✓[39m tests/components/admin/ReminderSettings.full.test.tsx [2m([22m[2m12 tests[22m[2m)[22m[33m 1430[2mms[22m[39m
+   [33m[2m✓[22m[39m ReminderSettings[2m > [22mrenders reminder settings component [33m 353[2mms[22m[39m
+ [32m✓[39m tests/components/AuditLog.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1173[2mms[22m[39m
+   [33m[2m✓[22m[39m AuditLog[2m > [22mrenders audit log table and filters [33m 761[2mms[22m[39m
+[90mstderr[2m | tests/lib/generated_frontend_tests.test.tsx[2m > [22m[2mAccountForm validation UI[2m > [22m[2maccepts valid account number and bank account number
+[22m[39m[MSW] Error: intercepted a request without a matching request handler:
+
+  • GET http://localhost:8000/api/accounts/?page=1&page_size=1
+
+If you still wish to intercept this unhandled request, please create a request handler for it.
+Read more: https://mswjs.io/docs/http/intercepting-requests
+
+[90mstderr[2m | tests/lib/generated_frontend_tests.test.tsx[2m > [22m[2mAccountForm validation UI[2m > [22m[2maccepts valid account number and bank account number
+[22m[39m[ERROR] Network/API error: http://localhost:8000/api/accounts/?page=1&page_size=1 InternalError: [MSW] Cannot bypass a request when using the "error" strategy for the "onUnhandledRequest" option.
+    at applyStrategy [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4mmsw[24m/src/core/utils/request/onUnhandledRequest.ts:42:15[90m)[39m
+    at onUnhandledRequest [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4mmsw[24m/src/core/utils/request/onUnhandledRequest.ts:79:5[90m)[39m
+    at handleRequest [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4mmsw[24m/src/core/utils/handleRequest.ts:79:11[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:105:5)[39m
+    at _Emitter.<anonymous> [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4mmsw[24m/src/node/SetupServerCommonApi.ts:60:26[90m)[39m
+    at emitAsync [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/utils/emitAsync.ts:23:5[90m)[39m
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/utils/handleRequest.ts:123:5
+    at until [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@open-draft[24m/until/src/until.ts:23:18[90m)[39m
+    at handleRequest [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/utils/handleRequest.ts:112:18[90m)[39m
+    at globalThis.fetch [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/interceptors/fetch/index.ts:185:7[90m)[39m
+
+[90mstderr[2m | tests/lib/generated_frontend_tests.test.tsx[2m > [22m[2mAccountForm validation UI[2m > [22m[2maccepts valid account number and bank account number
+[22m[39mFailed to generate account number: Error: [vitest] No "toast" export is defined on the "@/hooks/use-toast" mock. Did you forget to return it from "vi.mock"?
+If you need to partially mock a module, you can use "importOriginal" helper inside:
+
+    at VitestMocker.createError [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4mvitest[24m/dist/chunks/execute.B7h3T_Hc.js:284:17[90m)[39m
+    at Object.get [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4mvitest[24m/dist/chunks/execute.B7h3T_Hc.js:330:16[90m)[39m
+    at Object.error [90m(C:\Users\Aryan\OneDrive\Desktop\nsj\nsj-frontend\nsj-frontend\[39mlib\logger.ts:19:5[90m)[39m
+    at apiFetch [90m(C:\Users\Aryan\OneDrive\Desktop\nsj\nsj-frontend\nsj-frontend\[39mlib\api.ts:251:9[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:105:5)[39m
+    at generateAccountNumber [90m(C:\Users\Aryan\OneDrive\Desktop\nsj\nsj-frontend\nsj-frontend\[39mcomponents\accounts\AccountForm.tsx:234:30[90m)[39m {
+  codeFrame: [32m'vi\x1B[33m.\x1B[39m\x1B[34mmock\x1B[39m(\x1B[35mimport\x1B[39m(\x1B[32m"@/hooks/use-toast"\x1B[39m)\x1B[33m,\x1B[39m \x1B[35masync\x1B[39m (importOriginal) \x1B[33m=>\x1B[39m {\n'[39m +
+    [32m'  \x1B[35mconst\x1B[39m actual \x1B[33m=\x1B[39m \x1B[35mawait\x1B[39m \x1B[34mimportOriginal\x1B[39m()\n'[39m +
+    [32m'  \x1B[35mreturn\x1B[39m {\n'[39m +
+    [32m'    \x1B[33m...\x1B[39mactual\x1B[33m,\x1B[39m\n'[39m +
+    [32m'    \x1B[90m// your mocked methods\x1B[39m\n'[39m +
+    [32m'  }\n'[39m +
+    [32m'})'[39m
+}
+
+[90mstdout[2m | tests/pages/login.test.tsx[2m > [22m[2mLoginPage[2m > [22m[2mtoggles password visibility
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/logout.test.tsx[2m > [22m[2mLogoutPage[2m > [22m[2mshows return to login button
+[22m[39mMSW responding to /auth/logout (regex)
+MSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/logout.test.tsx[2m > [22m[2mLogoutPage[2m > [22m[2mcalls logout function on mount
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/logout.test.tsx[2m > [22m[2mLogoutPage[2m > [22m[2mcalls logout function on mount
+[22m[39mMSW responding to /auth/logout (regex)
+MSW responding to /auth/logout (regex)
+
+[90mstderr[2m | tests/lib/generated_frontend_tests.test.tsx[2m > [22m[2mAccountForm validation UI[2m > [22m[2mallows export data button to run and not crash
+[22m[39m[MSW] Error: intercepted a request without a matching request handler:
+
+  • GET http://localhost:8000/api/accounts/?page=1&page_size=1
+
+If you still wish to intercept this unhandled request, please create a request handler for it.
+Read more: https://mswjs.io/docs/http/intercepting-requests
+
+[90mstderr[2m | tests/lib/generated_frontend_tests.test.tsx[2m > [22m[2mAccountForm validation UI[2m > [22m[2mallows export data button to run and not crash
+[22m[39m[ERROR] Network/API error: http://localhost:8000/api/accounts/?page=1&page_size=1 InternalError: [MSW] Cannot bypass a request when using the "error" strategy for the "onUnhandledRequest" option.
+    at applyStrategy [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4mmsw[24m/src/core/utils/request/onUnhandledRequest.ts:42:15[90m)[39m
+    at onUnhandledRequest [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4mmsw[24m/src/core/utils/request/onUnhandledRequest.ts:79:5[90m)[39m
+    at handleRequest [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4mmsw[24m/src/core/utils/handleRequest.ts:79:11[90m)[39m
+    at _Emitter.<anonymous> [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4mmsw[24m/src/node/SetupServerCommonApi.ts:60:26[90m)[39m
+    at emitAsync [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/utils/emitAsync.ts:23:5[90m)[39m
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/utils/handleRequest.ts:123:5
+    at until [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@open-draft[24m/until/src/until.ts:23:18[90m)[39m
+    at handleRequest [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/utils/handleRequest.ts:112:18[90m)[39m
+    at globalThis.fetch [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/interceptors/fetch/index.ts:185:7[90m)[39m
+    at apiFetch [90m(C:\Users\Aryan\OneDrive\Desktop\nsj\nsj-frontend\nsj-frontend\[39mlib\api.ts:230:22[90m)[39m
+
+[90mstderr[2m | tests/lib/generated_frontend_tests.test.tsx[2m > [22m[2mAccountForm validation UI[2m > [22m[2mallows export data button to run and not crash
+[22m[39mFailed to generate account number: Error: [vitest] No "toast" export is defined on the "@/hooks/use-toast" mock. Did you forget to return it from "vi.mock"?
+If you need to partially mock a module, you can use "importOriginal" helper inside:
+
+    at VitestMocker.createError [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4mvitest[24m/dist/chunks/execute.B7h3T_Hc.js:284:17[90m)[39m
+    at Object.get [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4mvitest[24m/dist/chunks/execute.B7h3T_Hc.js:330:16[90m)[39m
+    at Object.error [90m(C:\Users\Aryan\OneDrive\Desktop\nsj\nsj-frontend\nsj-frontend\[39mlib\logger.ts:19:5[90m)[39m
+    at apiFetch [90m(C:\Users\Aryan\OneDrive\Desktop\nsj\nsj-frontend\nsj-frontend\[39mlib\api.ts:251:9[90m)[39m
+    at generateAccountNumber [90m(C:\Users\Aryan\OneDrive\Desktop\nsj\nsj-frontend\nsj-frontend\[39mcomponents\accounts\AccountForm.tsx:234:30[90m)[39m {
+  codeFrame: [32m'vi\x1B[33m.\x1B[39m\x1B[34mmock\x1B[39m(\x1B[35mimport\x1B[39m(\x1B[32m"@/hooks/use-toast"\x1B[39m)\x1B[33m,\x1B[39m \x1B[35masync\x1B[39m (importOriginal) \x1B[33m=>\x1B[39m {\n'[39m +
+    [32m'  \x1B[35mconst\x1B[39m actual \x1B[33m=\x1B[39m \x1B[35mawait\x1B[39m \x1B[34mimportOriginal\x1B[39m()\n'[39m +
+    [32m'  \x1B[35mreturn\x1B[39m {\n'[39m +
+    [32m'    \x1B[33m...\x1B[39mactual\x1B[33m,\x1B[39m\n'[39m +
+    [32m'    \x1B[90m// your mocked methods\x1B[39m\n'[39m +
+    [32m'  }\n'[39m +
+    [32m'})'[39m
+}
+
+ [32m✓[39m tests/components/admin/AuditLog.test.tsx [2m([22m[2m12 tests[22m[2m)[22m[33m 1646[2mms[22m[39m
+   [33m[2m✓[22m[39m AuditLog[2m > [22mrenders audit log component [33m 387[2mms[22m[39m
+ [32m✓[39m tests/pages/logout.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 930[2mms[22m[39m
+   [33m[2m✓[22m[39m LogoutPage[2m > [22mrenders signed out message [33m 423[2mms[22m[39m
+ [32m✓[39m tests/pages/login.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 1483[2mms[22m[39m
+   [33m[2m✓[22m[39m LoginPage[2m > [22mrenders login form [33m 977[2mms[22m[39m
+   [33m[2m✓[22m[39m LoginPage[2m > [22mtoggles password visibility [33m 465[2mms[22m[39m
+[90mstderr[2m | tests/lib/generated_frontend_tests.test.tsx[2m > [22m[2madditional small helpers and smoke tests[2m > [22m[2mrendering AccountForm does not call real network accountsMasters
+[22m[39m[MSW] Error: intercepted a request without a matching request handler:
+
+  • GET http://localhost:8000/api/accounts/?page=1&page_size=1
+
+If you still wish to intercept this unhandled request, please create a request handler for it.
+Read more: https://mswjs.io/docs/http/intercepting-requests
+
+[90mstderr[2m | tests/lib/generated_frontend_tests.test.tsx[2m > [22m[2madditional small helpers and smoke tests[2m > [22m[2mrendering AccountForm does not call real network accountsMasters
+[22m[39m[ERROR] Network/API error: http://localhost:8000/api/accounts/?page=1&page_size=1 InternalError: [MSW] Cannot bypass a request when using the "error" strategy for the "onUnhandledRequest" option.
+    at applyStrategy [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4mmsw[24m/src/core/utils/request/onUnhandledRequest.ts:42:15[90m)[39m
+    at onUnhandledRequest [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4mmsw[24m/src/core/utils/request/onUnhandledRequest.ts:79:5[90m)[39m
+    at handleRequest [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4mmsw[24m/src/core/utils/handleRequest.ts:79:11[90m)[39m
+    at _Emitter.<anonymous> [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4mmsw[24m/src/node/SetupServerCommonApi.ts:60:26[90m)[39m
+    at emitAsync [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/utils/emitAsync.ts:23:5[90m)[39m
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/utils/handleRequest.ts:123:5
+    at until [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@open-draft[24m/until/src/until.ts:23:18[90m)[39m
+    at handleRequest [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/utils/handleRequest.ts:112:18[90m)[39m
+    at globalThis.fetch [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@mswjs[24m/interceptors/src/interceptors/fetch/index.ts:185:7[90m)[39m
+    at apiFetch [90m(C:\Users\Aryan\OneDrive\Desktop\nsj\nsj-frontend\nsj-frontend\[39mlib\api.ts:230:22[90m)[39m
+
+[90mstderr[2m | tests/lib/generated_frontend_tests.test.tsx[2m > [22m[2madditional small helpers and smoke tests[2m > [22m[2mrendering AccountForm does not call real network accountsMasters
+[22m[39mFailed to generate account number: Error: [vitest] No "toast" export is defined on the "@/hooks/use-toast" mock. Did you forget to return it from "vi.mock"?
+If you need to partially mock a module, you can use "importOriginal" helper inside:
+
+    at VitestMocker.createError [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4mvitest[24m/dist/chunks/execute.B7h3T_Hc.js:284:17[90m)[39m
+    at Object.get [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4mvitest[24m/dist/chunks/execute.B7h3T_Hc.js:330:16[90m)[39m
+    at Object.error [90m(C:\Users\Aryan\OneDrive\Desktop\nsj\nsj-frontend\nsj-frontend\[39mlib\logger.ts:19:5[90m)[39m
+    at apiFetch [90m(C:\Users\Aryan\OneDrive\Desktop\nsj\nsj-frontend\nsj-frontend\[39mlib\api.ts:251:9[90m)[39m
+    at generateAccountNumber [90m(C:\Users\Aryan\OneDrive\Desktop\nsj\nsj-frontend\nsj-frontend\[39mcomponents\accounts\AccountForm.tsx:234:30[90m)[39m {
+  codeFrame: [32m'vi\x1B[33m.\x1B[39m\x1B[34mmock\x1B[39m(\x1B[35mimport\x1B[39m(\x1B[32m"@/hooks/use-toast"\x1B[39m)\x1B[33m,\x1B[39m \x1B[35masync\x1B[39m (importOriginal) \x1B[33m=>\x1B[39m {\n'[39m +
+    [32m'  \x1B[35mconst\x1B[39m actual \x1B[33m=\x1B[39m \x1B[35mawait\x1B[39m \x1B[34mimportOriginal\x1B[39m()\n'[39m +
+    [32m'  \x1B[35mreturn\x1B[39m {\n'[39m +
+    [32m'    \x1B[33m...\x1B[39mactual\x1B[33m,\x1B[39m\n'[39m +
+    [32m'    \x1B[90m// your mocked methods\x1B[39m\n'[39m +
+    [32m'  }\n'[39m +
+    [32m'})'[39m
+}
+
+ [32m✓[39m tests/components/queries/ArchivedQueriesList.full.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 863[2mms[22m[39m
+   [33m[2m✓[22m[39m ArchivedQueriesList - Extended Tests[2m > [22mhandles pagination [33m 412[2mms[22m[39m
+ [32m✓[39m tests/components/payment/BulkActions.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 709[2mms[22m[39m
+   [33m[2m✓[22m[39m BulkActions[2m > [22mcalls onScheduleBuilder when Schedule is clicked [33m 395[2mms[22m[39m
+ [32m✓[39m tests/lib/generated_frontend_tests.test.tsx [2m([22m[2m46 tests[22m[2m)[22m[33m 1948[2mms[22m[39m
+   [33m[2m✓[22m[39m AccountForm validation UI[2m > [22maccepts valid account number and bank account number [33m 1184[2mms[22m[39m
+   [33m[2m✓[22m[39m AccountForm validation UI[2m > [22mallows export data button to run and not crash [33m 316[2mms[22m[39m
+ [32m✓[39m tests/components/payment/PaymentTable.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 1161[2mms[22m[39m
+   [33m[2m✓[22m[39m PaymentTable[2m > [22mrenders invoice rows and selection checkboxes [33m 696[2mms[22m[39m
+   [33m[2m✓[22m[39m PaymentTable[2m > [22mcalls onSelectionChange when a row is selected [33m 433[2mms[22m[39m
+[90mstdout[2m | tests/components/admin/AdminPanel.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/vouchers/SalesHeader.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/payment/PaymentTracking.full.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/admin/AdminPanel.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[33m 1020[2mms[22m[39m
+[90mstdout[2m | tests/components/TabNavigation.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/vouchers/SalesHeader.test.tsx [2m([22m[2m16 tests[22m[2m)[22m[33m 688[2mms[22m[39m
+[90mstdout[2m | tests/components/DashboardCards.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/admin/ReminderSettings.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/vouchers/ReceiptList.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/TabNavigation.full.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/payment/ActivityLog.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/pages/home.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/admin/TemplateManagement.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/payment/PaymentTracking.full.test.tsx [2m([22m[2m11 tests[22m[2m)[22m[33m 877[2mms[22m[39m
+[90mstdout[2m | tests/components/admin/StakeholderManagement.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/TabNavigation.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[33m 782[2mms[22m[39m
+   [33m[2m✓[22m[39m TabNavigation[2m > [22mrenders tab navigation [33m 354[2mms[22m[39m
+[90mstdout[2m | tests/lib/backend.utils.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/ui/dropdown-menu.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/ui/input.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/lib/api.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/ui/badge.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/ui/button.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/DashboardCards.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 689[2mms[22m[39m
+[90mstdout[2m | tests/components/ui/skeleton.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/lib/api.test.ts[2m > [22m[2mapi.ts endpoint integration[2m > [22m[2mmakes a successful GET request and receives expected response
+[22m[39mMSW responding to /test (regex)
+
+[90mstdout[2m | tests/lib/api.test.ts[2m > [22m[2mapi.ts endpoint integration[2m > [22m[2mapi.get makes GET request and receives expected response
+[22m[39mMSW responding to /users (regex)
+
+[90mstdout[2m | tests/lib/api.test.ts[2m > [22m[2mapi.ts endpoint integration[2m > [22m[2mapi.post makes POST request and receives expected response
+[22m[39mMSW responding to /users (regex) { name: [32m'John'[39m }
+
+ [32m✓[39m tests/lib/api.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 334[2mms[22m[39m
+ [32m✓[39m tests/lib/backend.utils.test.ts [2m([22m[2m45 tests[22m[2m)[22m[33m 432[2mms[22m[39m
+   [33m[2m✓[22m[39m backend utility functions - additional tests[2m > [22mcreateUploadFormData - edge cases[2m > [22mhandles large blob [33m 306[2mms[22m[39m
+ [32m✓[39m tests/components/admin/ReminderSettings.test.tsx [2m([22m[2m1 test[22m[2m)[22m[33m 526[2mms[22m[39m
+   [33m[2m✓[22m[39m ReminderSettings[2m > [22mrenders without crashing [33m 513[2mms[22m[39m
+ [32m✓[39m tests/components/vouchers/ReceiptList.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 780[2mms[22m[39m
+   [33m[2m✓[22m[39m ReceiptList[2m > [22mrenders loading state initially [33m 306[2mms[22m[39m
+   [33m[2m✓[22m[39m ReceiptList[2m > [22mrenders receipt list [33m 310[2mms[22m[39m
+ [32m✓[39m tests/components/ui/input.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[33m 441[2mms[22m[39m
+ [32m✓[39m tests/pages/home.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 435[2mms[22m[39m
+   [33m[2m✓[22m[39m HomePage[2m > [22mshows loading state initially [33m 329[2mms[22m[39m
+ [32m✓[39m tests/components/payment/ActivityLog.test.tsx [2m([22m[2m1 test[22m[2m)[22m[33m 362[2mms[22m[39m
+   [33m[2m✓[22m[39m ActivityLog[2m > [22mrenders all activity rows and icons [33m 329[2mms[22m[39m
+ [32m✓[39m tests/components/ui/badge.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[33m 334[2mms[22m[39m
+ [32m✓[39m tests/components/ui/skeleton.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 319[2mms[22m[39m
+ [32m✓[39m tests/components/ui/button.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[33m 461[2mms[22m[39m
+ [32m✓[39m tests/components/admin/StakeholderManagement.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 624[2mms[22m[39m
+   [33m[2m✓[22m[39m StakeholderManagement[2m > [22mrenders without crashing [33m 462[2mms[22m[39m
+ [32m✓[39m tests/components/TabNavigation.full.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 718[2mms[22m[39m
+ [32m✓[39m tests/components/admin/TemplateManagement.test.tsx [2m([22m[2m1 test[22m[2m)[22m[33m 581[2mms[22m[39m
+   [33m[2m✓[22m[39m TemplateManagement[2m > [22mrenders without crashing [33m 566[2mms[22m[39m
+ [32m✓[39m tests/components/ui/dropdown-menu.test.tsx [2m([22m[2m11 tests[22m[2m)[22m[33m 464[2mms[22m[39m
+[90mstdout[2m | tests/components/ui/select.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/ui/card.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/ui/select.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 97[2mms[22m[39m
+ [32m✓[39m tests/components/ui/card.test.tsx [2m([22m[2m13 tests[22m[2m)[22m[32m 84[2mms[22m[39m
+[90mstdout[2m | tests/components/vouchers/VouchersHeader.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/ui/textarea.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/ui/label.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/hooks/useDebounce.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/hooks/use-toast.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/theme-provider.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/lib/backend.functions.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/lib/export.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/lib/api.utils.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/lib/logger.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/EstimateVoucherForm.validation.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/ui/textarea.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[32m 86[2mms[22m[39m
+ [32m✓[39m tests/components/vouchers/VouchersHeader.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 82[2mms[22m[39m
+[90mstderr[2m | tests/lib/api.utils.test.ts[2m > [22m[2mapi.ts utility functions and error cases[2m > [22m[2mapiFetch throws ApiError on network error
+[22m[39m[ERROR] Network/API error: http://localhost:8000/api/fail Error: fail
+    at [90mC:\Users\Aryan\OneDrive\Desktop\nsj\nsj-frontend\nsj-frontend\[39mtests\lib\api.utils.test.ts:46:46
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:105:5)[39m
+    at runSuite [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1729:8[90m)[39m
+    at runSuite [90m(file:///C:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1729:8[90m)[39m
+
+[90mstderr[2m | tests/lib/api.utils.test.ts[2m > [22m[2mapi.ts utility functions and error cases[2m > [22m[2mapiFetch throws ApiError on non-JSON error response
+[22m[39m[ERROR] API error: http://localhost:8000/api/fail [500] An error occurred {}
+
+[90mstdout[2m | tests/components/EstimateVoucherForm.edit.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/lib/backend.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/lib/export.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 40[2mms[22m[39m
+ [32m✓[39m tests/components/ui/label.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[32m 95[2mms[22m[39m
+[90mstdout[2m | lib/__tests__/businessDays.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/hooks/use-toast.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 62[2mms[22m[39m
+ [32m✓[39m tests/lib/backend.functions.test.ts [2m([22m[2m44 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32m✓[39m tests/hooks/useDebounce.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 52[2mms[22m[39m
+[90mstdout[2m | tests/lib/backend.more.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/lib/api.utils.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32m✓[39m tests/lib/logger.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m tests/components/EstimateVoucherForm.edit.test.tsx [2m([22m[2m13 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/components/theme-provider.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 72[2mms[22m[39m
+ [32m✓[39m tests/components/EstimateVoucherForm.validation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+[90mstdout[2m | tests/lib/estimateCalculations.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/lib/backend.test.ts [2m([22m[2m33 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32m✓[39m lib/__tests__/businessDays.test.ts [2m([22m[2m31 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m tests/lib/backend.more.test.ts [2m([22m[2m45 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+[90mstdout[2m | tests/components/vouchers/VoucherForm.calc.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/lib/estimateCalculations.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+[90mstdout[2m | tests/components/voucherForm.calc.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/vouchers/VoucherForm.calc.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+[90mstdout[2m | tests/lib/archiveClient.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/lib/archiveClient.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/components/voucherForm.calc.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+[90mstdout[2m | tests/lib/generated_frontend_tests.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/archives.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/lib/generated_frontend_tests.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/components/archives.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m78 passed[39m[22m[90m (78)[39m
+[2m      Tests [22m [1m[32m759 passed[39m[22m[90m (759)[39m
+[2m   Start at [22m 21:47:25
+[2m   Duration [22m 29.33s[2m (transform 14.20s, setup 73.91s, collect 71.62s, tests 50.54s, environment 198.67s, prepare 53.85s)[22m
+
+[34m % [39m[2mCoverage report from [22m[33mv8[39m
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   69.59 |    83.94 |      67 |   69.59 |                   
+ components        |   81.56 |    82.07 |   73.86 |   81.56 |                   
+  ...atOverlay.tsx |   71.11 |    80.76 |   42.85 |   71.11 | ...03,164,173-178 
+  ...atWrapper.tsx |      70 |       50 |     100 |      70 | 11-13             
+  ActivityLog.tsx  |   99.03 |     90.9 |     100 |   99.03 | 66                
+  ...aniesCrud.tsx |   94.33 |     92.1 |   66.66 |   94.33 | 45-53             
+  ...aniesList.tsx |     100 |    94.73 |     100 |     100 | 111               
+  ...oardCards.tsx |     100 |      100 |     100 |     100 |                   
+  ...boardKPIs.tsx |     100 |    97.95 |     100 |     100 | 32                
+  ...entOrders.tsx |   92.55 |       63 |   66.66 |   92.55 | ...57,459-465,494 
+  ...oardShell.tsx |   97.45 |       90 |     100 |   97.45 | 101-106,131       
+  ...lumnModal.tsx |   99.01 |    84.61 |     100 |   99.01 | 51                
+  Header.tsx       |       0 |        0 |       0 |       0 | 1-81              
+  ...loadModal.tsx |   87.22 |       80 |      80 |   87.22 | ...27,145-147,179 
+  ...tTracking.tsx |   92.88 |    84.78 |   72.72 |   92.88 | ...64,438,520-527 
+  SidebarNav.tsx   |   95.48 |    71.87 |      40 |   95.48 | ...06,505,518,531 
+  ...avigation.tsx |     100 |      100 |     100 |     100 |                   
+  ...d-visuals.tsx |       0 |        0 |       0 |       0 | 1-389             
+  ...-provider.tsx |     100 |      100 |     100 |     100 |                   
+ ...nents/accounts |   23.38 |     62.5 |     100 |   23.38 |                   
+  ...ntsHeader.tsx |      94 |    57.14 |     100 |      94 | 24,37,43          
+  ...sOverview.tsx |       0 |      100 |     100 |       0 | 3-191             
+ components/admin  |   97.27 |    82.92 |   78.26 |   97.27 |                   
+  AdminPanel.tsx   |   98.55 |     92.3 |     100 |   98.55 | 44                
+  AuditLog.tsx     |   95.31 |    73.07 |   57.14 |   95.31 | ...96,143,158,167 
+  ...anagement.tsx |     100 |    83.33 |     100 |     100 | 44                
+  ...rSettings.tsx |   91.32 |       40 |   33.33 |   91.32 | ...10-112,187-192 
+  ...anagement.tsx |     100 |     87.5 |     100 |     100 | 37                
+  ...anagement.tsx |   99.23 |     90.9 |     100 |   99.23 | 55                
+  ...anagement.tsx |     100 |      100 |     100 |     100 |                   
+ ...onents/payment |   97.18 |    90.16 |   83.87 |   97.18 |                   
+  ActivityLog.tsx  |   99.03 |     90.9 |     100 |   99.03 | 66                
+  BulkActions.tsx  |     100 |      100 |     100 |     100 |                   
+  ...ntFilters.tsx |     100 |      100 |     100 |     100 |                   
+  PaymentTable.tsx |   93.71 |       80 |   71.42 |   93.71 | ...-75,87,112-115 
+  ...tTracking.tsx |   98.55 |    83.33 |      60 |   98.55 | 82                
+  ...leBuilder.tsx |   97.81 |      100 |      90 |   97.81 | 94-97             
+ ...onents/queries |   72.35 |    60.65 |   33.33 |   72.35 |                   
+  ...eriesList.tsx |   79.58 |       60 |      25 |   79.58 | ...29,159-161,204 
+  ...eriesList.tsx |   67.34 |    60.97 |      40 |   67.34 | ...54,359,368-374 
+ components/ui     |   85.96 |      100 |   44.44 |   85.96 |                   
+  badge.tsx        |     100 |      100 |     100 |     100 |                   
+  button.tsx       |     100 |      100 |     100 |     100 |                   
+  card.tsx         |     100 |      100 |     100 |     100 |                   
+  ...down-menu.tsx |   55.07 |      100 |     100 |   55.07 | ...99-115,123-138 
+  input.tsx        |     100 |      100 |     100 |     100 |                   
+  label.tsx        |     100 |      100 |     100 |     100 |                   
+  select.tsx       |      92 |      100 |       0 |      92 | 32,36             
+  skeleton.tsx     |     100 |      100 |     100 |     100 |                   
+  textarea.tsx     |     100 |      100 |     100 |     100 |                   
+  toast.tsx        |     100 |      100 |     100 |     100 |                   
+  toaster.tsx      |     100 |      100 |     100 |     100 |                   
+ ...nents/vouchers |    7.48 |    86.36 |     100 |    7.48 |                   
+  ...FromQuery.tsx |       0 |      100 |     100 |       0 | 3-986             
+  ...mImproved.tsx |       0 |      100 |     100 |       0 | 3-991             
+  SalesHeader.tsx  |     100 |      100 |     100 |     100 |                   
+  ...ersHeader.tsx |   90.56 |     62.5 |     100 |   90.56 | 26,38-40,47       
+ hooks             |   96.42 |     90.9 |    90.9 |   96.42 |                   
+  use-toast.ts     |   96.03 |    89.65 |      90 |   96.03 | 58-59,107,155-156 
+  useAuth.ts       |     100 |      100 |     100 |     100 |                   
+  useDebounce.ts   |     100 |      100 |     100 |     100 |                   
+ lib               |   66.16 |    89.34 |   62.01 |   66.16 |                   
+  api.ts           |   73.87 |    73.33 |      75 |   73.87 | ...47,263,265,267 
+  auth.tsx         |   97.77 |       80 |     100 |   97.77 | 30                
+  backend.ts       |    55.6 |    93.33 |   56.14 |    55.6 | ...1303,1306-1667 
+  businessDays.ts  |     100 |      100 |     100 |     100 |                   
+  ...lculations.ts |     100 |     92.3 |     100 |     100 | 69-71             
+  export.ts        |     100 |       95 |     100 |     100 | 71                
+  logger.ts        |     100 |      100 |     100 |     100 |                   
+  utils.ts         |     100 |      100 |     100 |     100 |                   
+-------------------|---------|----------|---------|---------|-------------------

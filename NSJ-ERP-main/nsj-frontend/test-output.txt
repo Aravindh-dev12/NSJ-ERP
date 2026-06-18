@@ -1,0 +1,963 @@
+
+> jsc-frontend@0.1.0 test
+> vitest run --run --coverage
+
+
+[1m[46m RUN [49m[22m [36mv3.2.4 [39m[90mC:/Users/Aryan/OneDrive/Desktop/nsj/nsj-frontend/nsj-frontend[39m
+      [2mCoverage enabled with [22m[33mv8[39m
+
+[90mstdout[2m | tests/components/dashboard-visuals.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/vouchers/PurchaseTagwiseList.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/vouchers/PurchaseMList.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/CompaniesList.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/receipt/ReceiptClient.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/vouchers/SalesHeader.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/DashboardRecentOrders.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/vouchers/RepairList.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/InvoiceUploadModal.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/vouchers/ReceiveList.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/pages/dashboard.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/issues/RepairIssueList.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/vouchers/ReceiptList.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/issues/OrderIssueList.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/payment/ScheduleBuilder.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/payment/PaymentTracking.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/Header.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/PaymentTracking.full.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/SidebarNav.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [31m❯[39m tests/components/vouchers/PurchaseTagwiseList.test.tsx [2m([22m[2m4 tests[22m[2m | [22m[31m4 failed[39m[2m)[22m[32m 72[2mms[22m[39m
+[31m   [31m×[31m PurchaseTagwiseList[2m > [22mrenders loading state initially[39m[32m 47[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+[31m   [31m×[31m PurchaseTagwiseList[2m > [22mrenders purchase tagwise list[39m[32m 5[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+[31m   [31m×[31m PurchaseTagwiseList[2m > [22mhandles empty list[39m[32m 6[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+[31m   [31m×[31m PurchaseTagwiseList[2m > [22mhandles API error[39m[32m 5[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+ [31m❯[39m tests/components/vouchers/PurchaseMList.test.tsx [2m([22m[2m4 tests[22m[2m | [22m[31m4 failed[39m[2m)[22m[32m 80[2mms[22m[39m
+[31m   [31m×[31m PurchaseMList[2m > [22mrenders loading state initially[39m[32m 51[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+[31m   [31m×[31m PurchaseMList[2m > [22mrenders purchase list[39m[32m 11[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+[31m   [31m×[31m PurchaseMList[2m > [22mhandles empty list[39m[32m 5[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+[31m   [31m×[31m PurchaseMList[2m > [22mhandles API error[39m[32m 5[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+ [31m❯[39m tests/components/vouchers/RepairList.test.tsx [2m([22m[2m4 tests[22m[2m | [22m[31m4 failed[39m[2m)[22m[32m 75[2mms[22m[39m
+[31m   [31m×[31m RepairList[2m > [22mrenders loading state initially[39m[32m 48[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+[31m   [31m×[31m RepairList[2m > [22mrenders repair list[39m[32m 7[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+[31m   [31m×[31m RepairList[2m > [22mhandles empty list[39m[32m 5[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+[31m   [31m×[31m RepairList[2m > [22mhandles API error[39m[32m 5[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+ [31m❯[39m tests/components/issues/RepairIssueList.test.tsx [2m([22m[2m5 tests[22m[2m | [22m[31m5 failed[39m[2m)[22m[32m 91[2mms[22m[39m
+[31m   [31m×[31m RepairIssueList[2m > [22mrenders loading state initially[39m[32m 42[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+[31m   [31m×[31m RepairIssueList[2m > [22mrenders repair issue list[39m[32m 5[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+[31m   [31m×[31m RepairIssueList[2m > [22mhandles empty issue list[39m[32m 15[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+[31m   [31m×[31m RepairIssueList[2m > [22mhandles API error gracefully[39m[32m 16[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+[31m   [31m×[31m RepairIssueList[2m > [22mcalls repairIssueList on mount[39m[32m 6[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+ [31m❯[39m tests/components/vouchers/SalesHeader.test.tsx [2m([22m[2m3 tests[22m[2m | [22m[31m2 failed[39m[2m)[22m[32m 183[2mms[22m[39m
+[31m   [31m×[31m SalesHeader[2m > [22mrenders sales header with title[39m[32m 150[2mms[22m[39m
+[31m     → Unable to find an element with the text: Sales. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"space-y-6 rounded-lg border border-border bg-background p-6"[31m
+    [36m>[31m
+      [36m<div>[31m
+        [36m<h1[31m
+          [33mclass[31m=[32m"text-2xl font-semibold text-foreground lg:text-3xl"[31m
+        [36m/>[31m
+      [36m</div>[31m
+      [36m<nav[31m
+        [33mclass[31m=[32m"flex flex-wrap items-center gap-2"[31m
+      [36m>[31m
+        [36m<a[31m
+          [33mclass[31m=[32m"rounded-full border border-transparent px-4 py-2 text-sm font-medium transition-colors bg-secondary text-foreground hover:border-primary/40 hover:text-primary"[31m
+          [33mhref[31m=[32m"/vouchers/sale"[31m
+        [36m>[31m
+          [0mOverview[0m
+        [36m</a>[31m
+        [36m<a[31m
+          [33mclass[31m=[32m"rounded-full border border-transparent px-4 py-2 text-sm font-medium transition-colors bg-secondary text-foreground hover:border-primary/40 hover:text-primary"[31m
+          [33mhref[31m=[32m"/vouchers/sale/list"[31m
+        [36m>[31m
+          [0mList[0m
+        [36m</a>[31m
+        [36m<a[31m
+          [33mclass[31m=[32m"rounded-full border border-transparent px-4 py-2 text-sm font-medium transition-colors bg-secondary text-foreground hover:border-primary/40 hover:text-primary"[31m
+          [33mhref[31m=[32m"/vouchers/sale/new"[31m
+        [36m>[31m
+          [0mAdd New[0m
+        [36m</a>[31m
+      [36m</nav>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m[39m
+   [32m✓[39m SalesHeader[2m > [22mrenders navigation links[32m 10[2mms[22m[39m
+[31m   [31m×[31m SalesHeader[2m > [22mhighlights active link[39m[32m 14[2mms[22m[39m
+[31m     → [2mexpect([22m[31melement[31m[2m).toHaveClass([22m[32m[32m"bg-primary"[32m[31m[2m)[22m
+
+Expected the element to have class:
+[32m  bg-primary[31m
+Received:
+[31m  rounded-full border border-transparent px-4 py-2 text-sm font-medium transition-colors bg-secondary text-foreground hover:border-primary/40 hover:text-primary[31m[39m
+ [31m❯[39m tests/components/issues/OrderIssueList.test.tsx [2m([22m[2m5 tests[22m[2m | [22m[31m5 failed[39m[2m)[22m[32m 103[2mms[22m[39m
+[31m   [31m×[31m OrderIssueList[2m > [22mrenders loading state initially[39m[32m 72[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+[31m   [31m×[31m OrderIssueList[2m > [22mrenders order issue list[39m[32m 5[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+[31m   [31m×[31m OrderIssueList[2m > [22mhandles empty issue list[39m[32m 5[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+[31m   [31m×[31m OrderIssueList[2m > [22mhandles API error gracefully[39m[32m 5[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+[31m   [31m×[31m OrderIssueList[2m > [22mcalls orderIssueList on mount[39m[32m 6[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+ [31m❯[39m tests/components/vouchers/ReceiveList.test.tsx [2m([22m[2m4 tests[22m[2m | [22m[31m4 failed[39m[2m)[22m[32m 162[2mms[22m[39m
+[31m   [31m×[31m ReceiveList[2m > [22mrenders loading state initially[39m[32m 107[2mms[22m[39m
+[31m     → [vitest] No "usePathname" export is defined on the "next/navigation" mock. Did you forget to return it from "vi.mock"?
+If you need to partially mock a module, you can use "importOriginal" helper inside:
+[39m
+[31m   [31m×[31m ReceiveList[2m > [22mrenders receive list[39m[32m 15[2mms[22m[39m
+[31m     → [vitest] No "usePathname" export is defined on the "next/navigation" mock. Did you forget to return it from "vi.mock"?
+If you need to partially mock a module, you can use "importOriginal" helper inside:
+[39m
+[31m   [31m×[31m ReceiveList[2m > [22mhandles empty list[39m[32m 15[2mms[22m[39m
+[31m     → [vitest] No "usePathname" export is defined on the "next/navigation" mock. Did you forget to return it from "vi.mock"?
+If you need to partially mock a module, you can use "importOriginal" helper inside:
+[39m
+[31m   [31m×[31m ReceiveList[2m > [22mhandles API error[39m[32m 16[2mms[22m[39m
+[31m     → [vitest] No "usePathname" export is defined on the "next/navigation" mock. Did you forget to return it from "vi.mock"?
+If you need to partially mock a module, you can use "importOriginal" helper inside:
+[39m
+ [32m✓[39m tests/components/vouchers/ReceiptList.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 255[2mms[22m[39m
+ [32m✓[39m tests/components/Header.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[32m 287[2mms[22m[39m
+ [31m❯[39m tests/components/dashboard-visuals.test.tsx [2m([22m[2m3 tests[22m[2m | [22m[31m3 failed[39m[2m)[22m[32m 71[2mms[22m[39m
+[31m   [31m×[31m MonthlyChart[2m > [22mrenders chart with data[39m[32m 50[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+[31m   [31m×[31m MonthlyChart[2m > [22mrenders empty chart with no data[39m[32m 7[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+[31m   [31m×[31m MonthlyChart[2m > [22mrenders chart components[39m[32m 5[2mms[22m[39m
+[31m     → Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.[39m
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mdisplays user information
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mdisplays KPI values from API
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mdisplays gold rate card with price
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mdisplays overview section with chart
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mdisplays latest updates section
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mdisplays monthly chart data
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mshows trend percentage in KPI cards
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mhandles API error gracefully with fallback values
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mdisplays summary balances in overview
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mrenders user initials avatar
+[22m[39mMSW responding to /auth/me (regex)
+
+ [32m✓[39m tests/components/PaymentTracking.full.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1378[2mms[22m[39m
+   [33m[2m✓[22m[39m PaymentTracking (full)[2m > [22mfilters by search, status, month, and party [33m 727[2mms[22m[39m
+   [33m[2m✓[22m[39m PaymentTracking (full)[2m > [22mshows and closes dropdowns [33m 386[2mms[22m[39m
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mdisplays gold rate change percentage
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mshows correct badge colors for positive trends
+[22m[39mMSW responding to /auth/me (regex)
+
+ [32m✓[39m tests/components/SidebarNav.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 1157[2mms[22m[39m
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mhandles zero values correctly
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.test.tsx[2m > [22m[2mDashboardPage[2m > [22m[2mdisplays orders legend in chart section
+[22m[39mMSW responding to /auth/me (regex)
+
+ [32m✓[39m tests/pages/dashboard.test.tsx [2m([22m[2m15 tests[22m[2m)[22m[33m 1633[2mms[22m[39m
+   [33m[2m✓[22m[39m DashboardPage[2m > [22mrenders dashboard with KPI cards [33m 310[2mms[22m[39m
+ [32m✓[39m tests/components/payment/PaymentTracking.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1486[2mms[22m[39m
+   [33m[2m✓[22m[39m PaymentTracking[2m > [22mupdates filters when inputs change [33m 1137[2mms[22m[39m
+[90mstdout[2m | tests/components/payment/ScheduleBuilder.test.tsx[2m > [22m[2mScheduleBuilder[2m > [22m[2msubmits the form and closes
+[22m[39mSchedule created: {
+  cadence_days: [33m10[39m,
+  start_datetime: [32m''[39m,
+  grace_days: [33m5[39m,
+  channels: { email: [33mtrue[39m, whatsapp: [33mtrue[39m },
+  send_window_start: [32m'08:00'[39m,
+  send_window_end: [32m'18:00'[39m,
+  escalation_threshold_days: [33m21[39m,
+  escalation_stakeholder_ids: [],
+  template_id: [32m''[39m,
+  test_recipient: [32m'test@demo.com'[39m
+}
+
+ [32m✓[39m tests/components/payment/ScheduleBuilder.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 2298[2mms[22m[39m
+   [33m[2m✓[22m[39m ScheduleBuilder[2m > [22msubmits the form and closes [33m 2055[2mms[22m[39m
+ [31m❯[39m tests/components/CompaniesList.test.tsx [2m([22m[2m4 tests[22m[2m | [22m[31m4 failed[39m[2m)[22m[33m 3176[2mms[22m[39m
+[31m   [31m×[31m CompaniesList[2m > [22mrenders loading state initially[39m[32m 63[2mms[22m[39m
+[31m     → expected 0 to be greater than 0[39m
+[31m   [31m×[31m CompaniesList[2m > [22mrenders companies list[39m[33m 1047[2mms[22m[39m
+[31m     → Unable to find an element with the text: Company A. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<p[31m
+      [33mstyle[31m=[32m"color: red;"[31m
+    [36m>[31m
+      [0m[vitest] No "backend" export is defined on the "@/lib/backend" mock. Did you forget to return it from "vi.mock"?
+If you need to partially mock a module, you can use "importOriginal" helper inside:
+[0m
+    [36m</p>[31m
+  [36m</div>[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<p[31m
+        [33mstyle[31m=[32m"color: red;"[31m
+      [36m>[31m
+        [0m[vitest] No "backend" export is defined on the "@/lib/backend" mock. Did you forget to return it from "vi.mock"?
+If you need to partially mock a module, you can use "importOriginal" helper inside:
+[0m
+      [36m</p>[31m
+    [36m</div>[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[31m   [31m×[31m CompaniesList[2m > [22mhandles empty list[39m[33m 1039[2mms[22m[39m
+[31m     → expected "spy" to be called at least once
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<p[31m
+        [33mstyle[31m=[32m"color: red;"[31m
+      [36m>[31m
+        [0m[vitest] No "backend" export is defined on the "@/lib/backend" mock. Did you forget to return it from "vi.mock"?
+If you need to partially mock a module, you can use "importOriginal" helper inside:
+[0m
+      [36m</p>[31m
+    [36m</div>[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[31m   [31m×[31m CompaniesList[2m > [22mhandles API error[39m[33m 1016[2mms[22m[39m
+[31m     → expected "spy" to be called at least once
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<p[31m
+        [33mstyle[31m=[32m"color: red;"[31m
+      [36m>[31m
+        [0m[vitest] No "backend" export is defined on the "@/lib/backend" mock. Did you forget to return it from "vi.mock"?
+If you need to partially mock a module, you can use "importOriginal" helper inside:
+[0m
+      [36m</p>[31m
+    [36m</div>[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+ [31m❯[39m tests/components/DashboardRecentOrders.test.tsx [2m([22m[2m4 tests[22m[2m | [22m[31m4 failed[39m[2m)[22m[33m 3228[2mms[22m[39m
+[31m   [31m×[31m DashboardRecentOrders[2m > [22mrenders loading state initially[39m[32m 110[2mms[22m[39m
+[31m     → expected 0 to be greater than 0[39m
+[31m   [31m×[31m DashboardRecentOrders[2m > [22mrenders recent orders[39m[33m 1055[2mms[22m[39m
+[31m     → Unable to find an element with the text: SAL-001. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"rounded-lg bg-card text-card-foreground shadow-sm border border-gray-200"[31m
+    [36m>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"flex flex-col space-y-1.5 p-6"[31m
+      [36m>[31m
+        [36m<h3[31m
+          [33mclass[31m=[32m"tracking-tight text-lg font-semibold"[31m
+        [36m>[31m
+          [0mRecent Orders[0m
+        [36m</h3>[31m
+      [36m</div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"p-6 pt-0"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"h-48 flex flex-col items-center justify-center text-center gap-2"[31m
+        [36m>[31m
+          [36m<p[31m
+            [33mclass[31m=[32m"text-red-500 text-sm font-medium"[31m
+          [36m>[31m
+            [0mUnable to load sales records.[0m
+          [36m</p>[31m
+          [36m<p[31m
+            [33mclass[31m=[32m"text-xs text-gray-500"[31m
+          [36m>[31m
+            [0m[vitest] No "backend" export is defined on the "@/lib/backend" mock. Did you forget to return it from "vi.mock"?
+If you need to partially mock a module, you can use "importOriginal" helper inside:
+[0m
+          [36m</p>[31m
+          [36m<button[31m
+            [33mclass[31m=[32m"inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3"[31m
+          [36m>[31m
+            [0mRetry[0m
+          [36m</button>[31m
+        [36m</div>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"rounded-lg bg-card text-card-foreground shadow-sm border border-gray-200"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"flex flex-col space-y-1.5 p-6"[31m
+        [36m>[31m
+          [36m<h3[31m
+            [33mclass[31m=[32m"tracking-tight text-lg font-semibold"[31m
+          [36m>[31m
+            [0mRecent Orders[0m
+          [36m</h3>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"p-6 pt-0"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"h-48 flex flex-col items-center justify-center text-center gap-2"[31m
+          [36m>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-red-500 text-sm font-medium"[31m
+            [36m>[31m
+              [0mUnable to load sales records.[0m
+            [36m</p>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-xs text-gray-500"[31m
+            [36m>[31m
+              [0m[vitest] No "backend" export is defined on the "@/lib/backend" mock. Did you forget to return it from "vi.mock"?
+If you need to partially mock a module, you can use "importOriginal" helper inside:
+[0m
+            [36m</p>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3"[31m
+            [36m>[31m
+              [0mRetry[0m
+            [36m</button>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[31m   [31m×[31m DashboardRecentOrders[2m > [22mhandles empty orders list[39m[33m 1030[2mms[22m[39m
+[31m     → expected "spy" to be called at least once
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"rounded-lg bg-card text-card-foreground shadow-sm border border-gray-200"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"flex flex-col space-y-1.5 p-6"[31m
+        [36m>[31m
+          [36m<h3[31m
+            [33mclass[31m=[32m"tracking-tight text-lg font-semibold"[31m
+          [36m>[31m
+            [0mRecent Orders[0m
+          [36m</h3>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"p-6 pt-0"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"h-48 flex flex-col items-center justify-center text-center gap-2"[31m
+          [36m>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-red-500 text-sm font-medium"[31m
+            [36m>[31m
+              [0mUnable to load sales records.[0m
+            [36m</p>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-xs text-gray-500"[31m
+            [36m>[31m
+              [0m[vitest] No "backend" export is defined on the "@/lib/backend" mock. Did you forget to return it from "vi.mock"?
+If you need to partially mock a module, you can use "importOriginal" helper inside:
+[0m
+            [36m</p>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3"[31m
+            [36m>[31m
+              [0mRetry[0m
+            [36m</button>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[31m   [31m×[31m DashboardRecentOrders[2m > [22mhandles API error[39m[33m 1024[2mms[22m[39m
+[31m     → expected "spy" to be called at least once
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"rounded-lg bg-card text-card-foreground shadow-sm border border-gray-200"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"flex flex-col space-y-1.5 p-6"[31m
+        [36m>[31m
+          [36m<h3[31m
+            [33mclass[31m=[32m"tracking-tight text-lg font-semibold"[31m
+          [36m>[31m
+            [0mRecent Orders[0m
+          [36m</h3>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"p-6 pt-0"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"h-48 flex flex-col items-center justify-center text-center gap-2"[31m
+          [36m>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-red-500 text-sm font-medium"[31m
+            [36m>[31m
+              [0mUnable to load sales records.[0m
+            [36m</p>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-xs text-gray-500"[31m
+            [36m>[31m
+              [0m[vitest] No "backend" export is defined on the "@/lib/backend" mock. Did you forget to return it from "vi.mock"?
+If you need to partially mock a module, you can use "importOriginal" helper inside:
+[0m
+            [36m</p>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3"[31m
+            [36m>[31m
+              [0mRetry[0m
+            [36m</button>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[90mstdout[2m | tests/components/admin/VendorManagement.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/payment/PaymentFilters.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/lib/generated_frontend_tests.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/ui/dropdown-menu.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/ExportColumnModal.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [31m❯[39m tests/components/receipt/ReceiptClient.test.tsx [2m([22m[2m5 tests[22m[2m | [22m[31m5 failed[39m[2m)[22m[33m 4301[2mms[22m[39m
+[31m   [31m×[31m ReceiptClient[2m > [22mrenders loading state initially[39m[32m 137[2mms[22m[39m
+[31m     → expected 0 to be greater than 0[39m
+[31m   [31m×[31m ReceiptClient[2m > [22mrenders receipt list[39m[33m 1059[2mms[22m[39m
+[31m     → Unable to find an element with the text: Party 1. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"p-6 text-red-600"[31m
+    [36m>[31m
+      [0m[MSW] Cannot bypass a request when using the "error" strategy for the "onUnhandledRequest" option.[0m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"p-6 text-red-600"[31m
+      [36m>[31m
+        [0m[MSW] Cannot bypass a request when using the "error" strategy for the "onUnhandledRequest" option.[0m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[31m   [31m×[31m ReceiptClient[2m > [22mhandles empty receipt list[39m[33m 1028[2mms[22m[39m
+[31m     → expected "spy" to be called at least once
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"p-6 text-red-600"[31m
+      [36m>[31m
+        [0m[MSW] Cannot bypass a request when using the "error" strategy for the "onUnhandledRequest" option.[0m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[31m   [31m×[31m ReceiptClient[2m > [22mhandles API error gracefully[39m[33m 1012[2mms[22m[39m
+[31m     → expected "spy" to be called at least once
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"p-6 text-red-600"[31m
+      [36m>[31m
+        [0m[MSW] Cannot bypass a request when using the "error" strategy for the "onUnhandledRequest" option.[0m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[31m   [31m×[31m ReceiptClient[2m > [22mcalls receiptList on mount[39m[33m 1045[2mms[22m[39m
+[31m     → expected "spy" to be called at least once
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"p-6 text-red-600"[31m
+      [36m>[31m
+        [0m[MSW] Cannot bypass a request when using the "error" strategy for the "onUnhandledRequest" option.[0m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+ [32m✓[39m tests/components/InvoiceUploadModal.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[33m 4035[2mms[22m[39m
+   [33m[2m✓[22m[39m InvoiceUploadModal[2m > [22mrejects files that are too large [33m 1312[2mms[22m[39m
+   [33m[2m✓[22m[39m InvoiceUploadModal[2m > [22mhandles successful upload [33m 2305[2mms[22m[39m
+[90mstdout[2m | tests/pages/dashboard.recent-orders.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/pages/dashboard.bar-chart.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/DashboardKPIs.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/app/layout.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/pages/dashboard.kpi-values.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/pages/dashboard.recent-orders.test.tsx[2m > [22m[2mDashboardPage Overview section[2m > [22m[2mrenders latest updates section with order info
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.recent-orders.test.tsx[2m > [22m[2mDashboardPage Overview section[2m > [22m[2mdisplays summary balances correctly
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.recent-orders.test.tsx[2m > [22m[2mDashboardPage Overview section[2m > [22m[2mrenders export button in overview
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.recent-orders.test.tsx[2m > [22m[2mDashboardPage Overview section[2m > [22m[2mdisplays orders legend in chart
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/dashboard.bar-chart.test.tsx[2m > [22m[2mDashboardPage monthly chart content[2m > [22m[2mdisplays orders legend
+[22m[39mMSW responding to /auth/me (regex)
+
+ [32m✓[39m tests/components/payment/PaymentFilters.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 906[2mms[22m[39m
+   [33m[2m✓[22m[39m PaymentFilters[2m > [22mcalls onFilterChange for all fields [33m 808[2mms[22m[39m
+[90mstdout[2m | tests/pages/dashboard.bar-chart.test.tsx[2m > [22m[2mDashboardPage monthly chart content[2m > [22m[2mdisplays chart values from API data
+[22m[39mMSW responding to /auth/me (regex)
+
+ [32m✓[39m tests/components/ExportColumnModal.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[33m 762[2mms[22m[39m
+ [32m✓[39m tests/pages/dashboard.recent-orders.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 670[2mms[22m[39m
+   [33m[2m✓[22m[39m DashboardPage Overview section[2m > [22mrenders overview section with monthly chart [33m 307[2mms[22m[39m
+[90mstdout[2m | tests/pages/dashboard.bar-chart.test.tsx[2m > [22m[2mDashboardPage monthly chart content[2m > [22m[2mdisplays export button
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/components/CompaniesCrud.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/Dashboard.integration.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/admin/VendorManagement.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 852[2mms[22m[39m
+ [32m✓[39m tests/pages/dashboard.bar-chart.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 767[2mms[22m[39m
+   [33m[2m✓[22m[39m DashboardPage monthly chart content[2m > [22mrenders monthly chart with correct data and labels [33m 420[2mms[22m[39m
+[90mstdout[2m | tests/components/ui/toast.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/DashboardKPIs.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[33m 802[2mms[22m[39m
+ [32m✓[39m tests/components/ui/dropdown-menu.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[33m 943[2mms[22m[39m
+[90mstdout[2m | tests/pages/dashboard.kpi-values.test.tsx[2m > [22m[2mDashboardPage KPI card values[2m > [22m[2mdisplays trend percentages correctly
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/login.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/lib/generated_frontend_tests.test.tsx [2m([22m[2m46 tests[22m[2m)[22m[33m 600[2mms[22m[39m
+   [33m[2m✓[22m[39m AccountForm validation UI[2m > [22maccepts valid account number and bank account number [33m 369[2mms[22m[39m
+[90mstdout[2m | tests/pages/dashboard.kpi-values.test.tsx[2m > [22m[2mDashboardPage KPI card values[2m > [22m[2mdisplays average order value
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/components/ui/toaster.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/pages/dashboard.kpi-values.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 634[2mms[22m[39m
+   [33m[2m✓[22m[39m DashboardPage KPI card values[2m > [22mrenders correct values in KPI cards [33m 359[2mms[22m[39m
+[90mstdout[2m | tests/components/payment/PaymentTable.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/Dashboard.integration.test.tsx[2m > [22m[2mDashboardPage Backend Integration[2m > [22m[2mrenders overview section with chart
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/Dashboard.integration.test.tsx[2m > [22m[2mDashboardPage Backend Integration[2m > [22m[2mdisplays trend percentages
+[22m[39mMSW responding to /auth/me (regex)
+
+ [32m✓[39m tests/components/CompaniesCrud.test.tsx [2m([22m[2m14 tests[22m[2m)[22m[33m 759[2mms[22m[39m
+ [32m✓[39m tests/Dashboard.integration.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 659[2mms[22m[39m
+   [33m[2m✓[22m[39m DashboardPage Backend Integration[2m > [22mrenders KPIs from backend mock [33m 428[2mms[22m[39m
+[90mstdout[2m | tests/app/layout.test.tsx[2m > [22m[2mRootLayout[2m > [22m[2mrenders Toaster and children
+[22m[39mMSW responding to /auth/me (regex)
+
+ [32m✓[39m tests/app/layout.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 615[2mms[22m[39m
+   [33m[2m✓[22m[39m RootLayout[2m > [22mrenders without crashing and provides children [33m 446[2mms[22m[39m
+ [32m✓[39m tests/components/ui/toast.test.tsx [2m([22m[2m13 tests[22m[2m)[22m[33m 565[2mms[22m[39m
+[90mstdout[2m | tests/components/AIChatOverlay.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/ui/toaster.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 531[2mms[22m[39m
+ [32m✓[39m tests/components/payment/PaymentTable.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 513[2mms[22m[39m
+[90mstdout[2m | tests/components/AuditLog.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/pages/login.test.tsx[2m > [22m[2mLoginPage[2m > [22m[2mtoggles password visibility
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/logout.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/pages/login.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 507[2mms[22m[39m
+   [33m[2m✓[22m[39m LoginPage[2m > [22mrenders login form [33m 319[2mms[22m[39m
+ [32m✓[39m tests/components/AIChatOverlay.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[33m 596[2mms[22m[39m
+ [32m✓[39m tests/components/AuditLog.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 342[2mms[22m[39m
+[90mstdout[2m | tests/pages/logout.test.tsx[2m > [22m[2mLogoutPage[2m > [22m[2mshows return to login button
+[22m[39mMSW responding to /auth/logout (regex)
+MSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/logout.test.tsx[2m > [22m[2mLogoutPage[2m > [22m[2mcalls logout function on mount
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/pages/logout.test.tsx[2m > [22m[2mLogoutPage[2m > [22m[2mcalls logout function on mount
+[22m[39mMSW responding to /auth/logout (regex)
+MSW responding to /auth/logout (regex)
+
+ [32m✓[39m tests/pages/logout.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 353[2mms[22m[39m
+[90mstdout[2m | tests/components/payment/BulkActions.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/TabNavigation.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/queries/ArchivedQueriesList.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/lib/auth.context.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/admin/InvoiceManagement.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/admin/StakeholderManagement.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/queries/PendingQueriesList.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/DashboardCards.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/lib/auth.context.test.tsx[2m > [22m[2mauth.tsx context and flows[2m > [22m[2mrenders AuthProvider and exposes context (loading state)
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/lib/auth.context.test.tsx[2m > [22m[2mauth.tsx context and flows[2m > [22m[2mlogin and logout update user state (integration)
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/lib/auth.context.test.tsx[2m > [22m[2mauth.tsx context and flows[2m > [22m[2mlogin and logout update user state (integration)
+[22m[39mMSW responding to /auth/me (regex)
+
+[90mstdout[2m | tests/lib/auth.context.test.tsx[2m > [22m[2mauth.tsx context and flows[2m > [22m[2mlogin and logout update user state (integration)
+[22m[39mMSW responding to /auth/logout (regex)
+
+ [32m✓[39m tests/lib/auth.context.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 246[2mms[22m[39m
+ [32m✓[39m tests/components/queries/ArchivedQueriesList.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 252[2mms[22m[39m
+ [32m✓[39m tests/components/TabNavigation.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[32m 289[2mms[22m[39m
+ [32m✓[39m tests/components/payment/BulkActions.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 267[2mms[22m[39m
+ [32m✓[39m tests/components/admin/StakeholderManagement.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 317[2mms[22m[39m
+ [32m✓[39m tests/components/admin/InvoiceManagement.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 270[2mms[22m[39m
+ [32m✓[39m tests/components/DashboardCards.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[32m 271[2mms[22m[39m
+ [32m✓[39m tests/components/queries/PendingQueriesList.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 260[2mms[22m[39m
+[90mstdout[2m | tests/components/admin/TemplateManagement.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/pages/home.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/admin/ReminderSettings.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/payment/ActivityLog.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/vouchers/VouchersHeader.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/ui/select.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/ui/textarea.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/admin/TemplateManagement.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 227[2mms[22m[39m
+ [32m✓[39m tests/components/vouchers/VouchersHeader.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 122[2mms[22m[39m
+ [32m✓[39m tests/components/payment/ActivityLog.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 136[2mms[22m[39m
+ [32m✓[39m tests/pages/home.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 132[2mms[22m[39m
+[90mstdout[2m | tests/lib/api.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/admin/ReminderSettings.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 240[2mms[22m[39m
+[90mstdout[2m | tests/lib/api.test.ts[2m > [22m[2mapi.ts endpoint integration[2m > [22m[2mmakes a successful GET request and receives expected response
+[22m[39mMSW responding to /test (regex)
+
+[90mstdout[2m | tests/lib/api.test.ts[2m > [22m[2mapi.ts endpoint integration[2m > [22m[2mapi.get makes GET request and receives expected response
+[22m[39mMSW responding to /users (regex)
+
+[90mstdout[2m | tests/lib/api.test.ts[2m > [22m[2mapi.ts endpoint integration[2m > [22m[2mapi.post makes POST request and receives expected response
+[22m[39mMSW responding to /users (regex) { name: [32m'John'[39m }
+
+ [32m✓[39m tests/lib/api.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 106[2mms[22m[39m
+ [32m✓[39m tests/components/ui/select.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 127[2mms[22m[39m
+[90mstdout[2m | tests/components/ui/badge.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/ui/textarea.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[32m 142[2mms[22m[39m
+[90mstdout[2m | tests/hooks/use-toast.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/theme-provider.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/ui/badge.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[32m 113[2mms[22m[39m
+ [32m✓[39m tests/hooks/use-toast.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 88[2mms[22m[39m
+ [32m✓[39m tests/components/theme-provider.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 106[2mms[22m[39m
+[90mstdout[2m | tests/lib/api.utils.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/hooks/useDebounce.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/lib/export.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/lib/api.utils.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 42[2mms[22m[39m
+[90mstdout[2m | tests/lib/backend.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | lib/__tests__/businessDays.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/lib/logger.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/lib/export.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 61[2mms[22m[39m
+[90mstdout[2m | tests/lib/estimateCalculations.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m lib/__tests__/businessDays.test.ts [2m([22m[2m31 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32m✓[39m tests/lib/backend.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 29[2mms[22m[39m
+ [32m✓[39m tests/lib/logger.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m tests/hooks/useDebounce.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 83[2mms[22m[39m
+ [32m✓[39m tests/lib/estimateCalculations.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+[90mstdout[2m | tests/components/EstimateVoucherForm.edit.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/EstimateVoucherForm.edit.test.tsx [2m([22m[2m13 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+[90mstdout[2m | tests/components/EstimateVoucherForm.validation.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/archives.test.tsx
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/components/vouchers/VoucherForm.calc.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+[90mstdout[2m | tests/lib/archiveClient.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/EstimateVoucherForm.validation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+[90mstdout[2m | tests/components/voucherForm.calc.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/components/archives.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/lib/archiveClient.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 8[2mms[22m[39m
+[90mstdout[2m | tests/lib/generated_frontend_tests.test.ts
+[22m[39mTEST SETUP: API_BASE_URL: http://localhost:8000/api
+TEST SETUP: NODE_ENV: test
+
+ [32m✓[39m tests/lib/generated_frontend_tests.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 97[2mms[22m[39m
+ [32m✓[39m tests/components/vouchers/VoucherForm.calc.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 40[2mms[22m[39m
+ [32m✓[39m tests/components/voucherForm.calc.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+
+[2m Test Files [22m [1m[31m11 failed[39m[22m[2m | [22m[1m[32m60 passed[39m[22m[90m (71)[39m
+[2m      Tests [22m [1m[31m44 failed[39m[22m[2m | [22m[1m[32m453 passed[39m[22m[90m (497)[39m
+[2m   Start at [22m 20:33:54
+[2m   Duration [22m 28.13s[2m (transform 10.01s, setup 55.55s, collect 52.98s, tests 40.66s, environment 159.65s, prepare 32.87s)[22m
+
