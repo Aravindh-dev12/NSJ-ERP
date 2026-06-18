@@ -1,0 +1,4 @@
+
+--- Checking Customer Section ---\nMost common color in Customer Section: RGB=(249, 242, 239) -> Normalized=(0.976, 0.949, 0.937)\nCount: 799\nAlternative: (199, 173, 172) -> count 9\nAlternative: (232, 219, 217) -> count 6\nAlternative: (192, 162, 162) -> count 6\nAlternative: (240, 230, 227) -> count 5\n
+--- Checking Invoice Details Section ---\nMost common color in Invoice Details Section: RGB=(249, 242, 239) -> Normalized=(0.976, 0.949, 0.937)\nCount: 230\nAlternative: (139, 87, 89) -> count 3\nAlternative: (239, 228, 225) -> count 3\nAlternative: (140, 89, 91) -> count 2\nAlternative: (161, 119, 120) -> count 2\n
+--- Checking Total Row Section ---\nMost common color in Total Row Section: RGB=(242, 228, 223) -> Normalized=(0.949, 0.894, 0.875)\nCount: 178\nAlternative: (148, 99, 100) -> count 66\nAlternative: (205, 177, 175) -> count 5\nAlternative: (233, 216, 211) -> count 1\nAlternative: (196, 165, 163) -> count 1\nDone.\n

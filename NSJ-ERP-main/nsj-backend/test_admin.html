@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSJ Backend - Admin Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .info {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            color: #0c5460;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 10px 5px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+        .credentials {
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .credentials strong {
+            color: #856404;
+        }
+        ul {
+            line-height: 1.8;
+        }
+        .status {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .status.success {
+            background: #28a745;
+            color: white;
+        }
+        .status.pending {
+            background: #ffc107;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 NSJ Backend - Test Admin Interface</h1>
+        
+        <div class="success">
+            <strong>✅ Setup Complete!</strong><br>
+            Your NSJ backend is ready for testing.
+        </div>
+
+        <h2>📋 Test Credentials</h2>
+        <div class="credentials">
+            <strong>Admin Login:</strong><br>
+            URL: <a href="http://localhost:8000/admin" target="_blank">http://localhost:8000/admin</a><br>
+            Email: <strong>admin@nsj.com</strong><br>
+            Password: <strong>admin123</strong>
+        </div>
+
+        <h2>🎯 Quick Test Checklist</h2>
+        <div class="info">
+            <strong>Test Data Available:</strong>
+            <ul>
+                <li>✅ 1 Company: "NSJ Main" (Nitip Shah Jewels)</li>
+                <li>✅ 1 Superuser: admin@nsj.com</li>
+                <li>✅ All models created and ready</li>
+            </ul>
+        </div>
+
+        <h2>🔍 What to Test</h2>
+        <ol>
+            <li><strong>Login to Admin</strong>
+                <ul>
+                    <li>Go to http://localhost:8000/admin</li>
+                    <li>Login with the credentials above</li>
+                </ul>
+            </li>
+            <li><strong>Explore Models</strong>
+                <ul>
+                    <li>Check all sections in admin (Core, Users, Accounts, Products, Rates)</li>
+                    <li>All models should display properly</li>
+                </ul>
+            </li>
+            <li><strong>Create Test Data</strong>
+                <ul>
+                    <li>Create a Branch</li>
+                    <li>Add geographic data (Country, State, City)</li>
+                    <li>Create an Account with all 4 detail tabs</li>
+                    <li>Add a Product</li>
+                    <li>Create a Daily Rate</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2>🛠️ Server Status</h2>
+        <div class="info">
+            <strong>If server is not running:</strong><br>
+            <code>
+                cd nsj-backend<br>
+                python manage.py runserver
+            </code>
+        </div>
+
+        <h2>📚 Helpful Commands</h2>
+        <div class="info">
+            <strong>Run setup test:</strong><br>
+            <code>python test_setup.py</code><br><br>
+            
+            <strong>Check server:</strong><br>
+            <code>python manage.py check</code><br><br>
+            
+            <strong>Create superuser:</strong><br>
+            <code>python manage.py createsuperuser</code>
+        </div>
+
+        <h2>🔗 Quick Links</h2>
+        <a href="http://localhost:8000/admin" class="button" target="_blank">Open Django Admin</a>
+        <a href="http://localhost:8000/admin/core/company/" class="button" target="_blank">View Companies</a>
+        <a href="http://localhost:8000/admin/accounts/account/" class="button" target="_blank">View Accounts</a>
+        
+        <hr style="margin: 30px 0;">
+        
+        <p><em>Documentation: README.md, QUICK_START.md, MIGRATION_SUMMARY.md</em></p>
+    </div>
+
+    <script>
+        // Simple health check
+        fetch('http://localhost:8000/admin/login/')
+            .then(response => {
+                const status = document.createElement('div');
+                status.innerHTML = '<span class="status success">✅ Server is running</span>';
+                document.querySelector('h2').after(status);
+            })
+            .catch(error => {
+                const status = document.createElement('div');
+                status.innerHTML = '<span class="status pending">⚠️ Server not running - Start with: python manage.py runserver</span>';
+                document.querySelector('h2').after(status);
+            });
+    </script>
+</body>
+</html>
+

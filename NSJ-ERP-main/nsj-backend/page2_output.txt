@@ -1,0 +1,169 @@
+﻿Total pages: 3
+
+=== Page 1 (size: Rect(0.0, 0.0, 595.2760009765625, 841.8900146484375)) ===
+  bbox=(502.6, 12.9, 577.7, 28.1)  text='TAX INVOICE'
+  bbox=(364.6, 72.9, 447.9, 81.3)  text='2/63 JVPD, NS Road No. 1'
+  bbox=(364.6, 81.3, 439.7, 89.7)  text='Vile Parle West, Mumbai'
+  bbox=(374.7, 94.9, 426.7, 103.3)  text='+919987520906'
+  bbox=(467.8, 72.9, 506.3, 81.3)  text='GSTIN/UIN:'
+  bbox=(506.3, 72.9, 568.1, 81.3)  text='27FSFPS4058J1Z5'
+  bbox=(467.8, 81.3, 508.1, 89.7)  text='State Name:'
+  bbox=(508.1, 81.3, 550.2, 89.7)  text='Maharashtra'
+  bbox=(467.8, 89.7, 487.1, 98.1)  text='Code:'
+  bbox=(487.1, 89.7, 496.5, 98.1)  text='27'
+  bbox=(374.7, 103.7, 455.8, 112.1)  text='hello@nitishahjewels.com'
+  bbox=(109.9, 140.0, 165.7, 148.4)  text='BUYER (BILL TO):'
+  bbox=(367.2, 159.2, 394.3, 169.2)  text='DATED'
+  bbox=(487.9, 159.2, 539.9, 169.2)  text='INVOICE NO.'
+  bbox=(367.2, 176.7, 411.9, 186.7)  text='03/01/2026'
+  bbox=(487.9, 176.7, 497.7, 186.7)  text='28'
+  bbox=(367.2, 194.2, 477.6, 204.2)  text='MODE/TERMS OF PAYMENT'
+  bbox=(487.9, 194.2, 547.6, 204.2)  text='Place of Supply'
+  bbox=(487.9, 211.7, 531.3, 221.8)  text='03 (Punjab)'
+  bbox=(115.1, 246.5, 126.4, 253.7)  text='S.N.'
+  bbox=(169.7, 246.5, 241.9, 253.7)  text='DESCRIPTION OF GOODS'
+  bbox=(289.7, 246.5, 320.7, 253.7)  text='HSN CODE'
+  bbox=(341.8, 246.5, 372.3, 253.7)  text='QUANTITY'
+  bbox=(406.3, 246.5, 421.3, 253.7)  text='RATE'
+  bbox=(452.2, 242.9, 467.7, 250.1)  text='UNIT'
+  bbox=(451.5, 250.1, 467.1, 257.3)  text='(PER)'
+  bbox=(503.8, 246.5, 530.4, 253.7)  text='AMOUNT'
+  bbox=(113.9, 263.8, 119.4, 273.4)  text='1.'
+  bbox=(135.6, 263.8, 220.4, 273.4)  text='18K GOLD JEWELLERY'
+  bbox=(336.8, 263.8, 377.3, 273.4)  text='4.910 GMS'
+  bbox=(400.5, 265.5, 406.2, 273.3)  text='`'
+  bbox=(406.2, 263.8, 439.8, 273.4)  text='11,135.00'
+  bbox=(450.3, 263.8, 468.2, 273.4)  text='GMS'
+  bbox=(512.4, 265.5, 518.1, 273.3)  text='`'
+  bbox=(518.1, 263.8, 555.5, 273.4)  text='54,672.85'
+  bbox=(113.9, 279.5, 120.8, 289.0)  text='2.'
+  bbox=(135.6, 279.5, 220.4, 289.0)  text='18K GOLD JEWELLERY'
+  bbox=(337.0, 279.5, 377.1, 289.0)  text='1.650 GMS'
+  bbox=(399.4, 281.1, 405.1, 289.0)  text='`'
+  bbox=(405.1, 279.5, 439.8, 289.0)  text='20,157.58'
+  bbox=(450.3, 279.5, 468.2, 289.0)  text='GMS'
+  bbox=(517.8, 281.1, 523.5, 289.0)  text='`'
+  bbox=(523.5, 279.5, 555.5, 289.0)  text='3,260.01'
+  bbox=(224.3, 378.7, 278.3, 388.3)  text='IGST - Output'
+  bbox=(411.3, 378.7, 416.3, 388.3)  text='3'
+  bbox=(456.1, 378.7, 462.4, 388.3)  text='%'
+  bbox=(517.9, 380.6, 523.3, 388.1)  text='`'
+  bbox=(523.3, 378.7, 555.5, 388.3)  text='2,637.99'
+  bbox=(239.7, 394.4, 276.1, 403.9)  text='Round off'
+  bbox=(408.7, 394.4, 418.9, 403.9)  text='1.5'
+  bbox=(535.1, 396.0, 540.8, 403.9)  text='`'
+  bbox=(540.8, 394.4, 555.5, 403.9)  text='0.15'
+  bbox=(250.3, 543.8, 276.1, 553.3)  text='TOTAL'
+  bbox=(336.6, 543.8, 379.8, 553.3)  text='6.560 GMS'
+  bbox=(453.9, 543.8, 464.7, 553.3)  text='CT'
+  bbox=(511.1, 545.7, 516.5, 553.2)  text='`'
+  bbox=(516.5, 543.8, 555.5, 553.3)  text='90,571.00'
+  bbox=(113.9, 559.4, 246.2, 569.0)  text='AMOUNT CHARGEABLE IN WORDS'
+  bbox=(113.9, 569.0, 428.1, 578.6)  text='INR TEN LAKH EIGHTY ONE THOUSAND ONE HUNDRED AND TWENTY SEVEN ONLY'
+  bbox=(115.1, 591.5, 126.4, 598.7)  text='S.N.'
+  bbox=(183.0, 591.5, 228.7, 598.7)  text='HSN/SAC CODE'
+  bbox=(292.1, 587.9, 319.7, 595.1)  text='TAXABLE'
+  bbox=(295.6, 595.1, 314.8, 602.3)  text='VALUE'
+  bbox=(380.4, 584.6, 393.7, 591.8)  text='IGST'
+  bbox=(471.8, 591.5, 531.4, 598.7)  text='TOTAL TAX AMOUNT'
+  bbox=(349.6, 598.3, 364.5, 605.5)  text='RATE'
+  bbox=(400.5, 598.3, 427.0, 605.5)  text='AMOUNT'
+  bbox=(119.1, 612.0, 122.4, 621.6)  text='1'
+  bbox=(510.6, 613.5, 516.4, 621.5)  text='`'
+  bbox=(516.4, 612.0, 555.5, 621.6)  text='87,932.86'
+  bbox=(113.9, 629.5, 246.2, 639.1)  text='AMOUNT CHARGEABLE IN WORDS'
+  bbox=(113.9, 639.1, 376.8, 648.7)  text='INR FIFTEEN THOUSAND NINE HUNDRED AND SEVENTY SEVEN ONLY'
+  bbox=(124.9, 679.3, 167.3, 688.9)  text='Declaration'
+  bbox=(124.9, 688.9, 308.2, 698.5)  text='We declare that this invoice shows the actual price'
+  bbox=(124.9, 698.5, 303.0, 708.1)  text='of the goods describes and that all particulars are'
+  bbox=(124.9, 708.1, 184.4, 717.7)  text='true and correct.'
+  bbox=(392.3, 654.7, 497.5, 664.3)  text="COMPANY'S BANK DETAILS"
+  bbox=(363.1, 670.3, 439.8, 679.9)  text='A/C HOLDER NAME:'
+  bbox=(447.8, 670.3, 518.0, 679.9)  text='NITI NILESH SHAH'
+  bbox=(389.9, 685.9, 439.8, 695.5)  text='BANK NAME:'
+  bbox=(447.8, 685.9, 493.6, 695.5)  text='HDFC BANK'
+  bbox=(406.1, 701.5, 439.8, 711.1)  text='A/C NO.:'
+  bbox=(447.8, 701.5, 510.8, 711.1)  text='50200111236249'
+  bbox=(352.9, 724.9, 439.8, 734.5)  text='BRANCH & IFSC CODE:'
+  bbox=(447.8, 717.1, 513.4, 726.7)  text='VILE PARLE EAST'
+  bbox=(447.8, 732.7, 504.1, 742.3)  text='HDFC0000227'
+  bbox=(157.1, 748.3, 283.1, 757.9)  text='CUSTOMER SIGNATURE & STAMP'
+  bbox=(464.9, 748.3, 555.5, 757.9)  text='FOR NITI SHAH JEWELS'
+  bbox=(456.8, 795.1, 555.5, 804.7)  text='AUTHORISED SIGNATORY'
+  bbox=(109.9, 814.9, 331.2, 824.5)  text='Every piece tells a story - thank you for making us part of yours.'
+  bbox=(454.6, 814.9, 559.5, 826.3)  text='www.nitishahjewels.com'
+  bbox=(263.1, 45.5, 267.6, 49.7)  text='TM'
+  bbox=(364.6, 52.9, 456.1, 67.3)  text='Niti Shah Jewels'
+  bbox=(109.9, 154.4, 209.3, 166.4)  text='SATYAM JEWELLERS'
+  bbox=(109.9, 166.1, 329.4, 176.6)  text='624, BANK ROAD, MUKSTAR, PUNJAB, Ph: 9814198040'
+  bbox=(109.9, 187.1, 157.9, 197.6)  text='GSTIN/UIN:'
+  bbox=(157.9, 187.1, 240.6, 197.6)  text='03AEFPG4541P1ZH'
+  bbox=(240.6, 187.1, 261.5, 197.6)  text='PAN:'
+  bbox=(261.5, 187.1, 315.8, 197.6)  text='AEFPG4541P'
+  bbox=(109.9, 197.6, 160.2, 208.1)  text='State Name:'
+  bbox=(160.2, 197.6, 190.8, 208.1)  text='Panjab'
+  bbox=(109.9, 208.1, 134.0, 218.6)  text='Code:'
+  bbox=(134.0, 208.1, 146.5, 218.6)  text='03'
+  bbox=(212.6, 107.9, 262.3, 117.5)  text='Gross Weight'
+
+=== Page 2 (size: Rect(0.0, 0.0, 595.2760009765625, 841.8900146484375)) ===
+  bbox=(62.8, 196.6, 95.9, 206.2)  text='SJER174'
+  bbox=(245.5, 196.6, 304.8, 206.2)  text='GOLD EARRING'
+  bbox=(446.8, 196.6, 467.5, 206.2)  text='DATE'
+  bbox=(499.6, 196.6, 546.2, 206.2)  text='03/01/2026'
+  bbox=(126.6, 216.3, 167.1, 225.8)  text='Particulars'
+  bbox=(232.7, 216.3, 256.5, 225.8)  text='Shape'
+  bbox=(266.2, 216.3, 291.1, 225.8)  text='Colour'
+  bbox=(300.8, 216.3, 325.4, 225.8)  text='Clarity'
+  bbox=(336.8, 216.3, 350.5, 225.8)  text='Pcs'
+  bbox=(361.2, 216.3, 386.0, 225.8)  text='Carats'
+  bbox=(396.9, 216.3, 421.4, 225.8)  text='Grams'
+  bbox=(448.6, 216.3, 465.7, 225.8)  text='Rate'
+  bbox=(508.4, 216.3, 555.3, 225.8)  text='Amount (Rs)'
+  bbox=(126.6, 235.9, 176.2, 245.5)  text='Gross Weight'
+  bbox=(398.9, 235.9, 419.3, 245.5)  text='4.910'
+  bbox=(126.6, 259.0, 204.0, 268.6)  text='GOLD NET WEIGHT'
+  bbox=(203.9, 259.0, 223.7, 268.6)  text='18KT'
+  bbox=(398.9, 259.0, 419.3, 268.6)  text='4.910'
+python : Traceback (most 
+recent call last):
+At line:1 char:1
++ python 
+extract_page2_text.py 2>&1 
+| Out-File -FilePath 
+page2_output.t ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo          
+    : NotSpecified: (Trace  
+  back (most recent call    
+ last)::String) [], Remo    
+teException
+    + FullyQualifiedErrorId 
+    : NativeCommandError
+ 
+  File "C:\Users\Aryan\OneDr
+ive\Desktop\nsj\nsj-backend\
+nsj-backend\extract_page2_te
+xt.py", line 17, in <module>
+    print(f"  
+bbox=({bbox[0]:.1f}, 
+{bbox[1]:.1f}, 
+{bbox[2]:.1f}, 
+{bbox[3]:.1f})  
+text={repr(text)}")
+  File "C:\Users\Aryan\AppDa
+ta\Local\Programs\Python\Pyt
+hon312\Lib\encodings\cp1252.
+py", line 19, in encode
+    return codecs.charmap_en
+code(input,self.errors,encod
+ing_table)[0]
+           ^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^
+UnicodeEncodeError: 
+'charmap' codec can't 
+encode character '\u20b9' 
+in position 43: character 
+maps to <undefined>
