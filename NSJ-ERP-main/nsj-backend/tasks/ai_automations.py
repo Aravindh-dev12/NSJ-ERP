@@ -33,7 +33,7 @@ class AIAutomationEngine:
 
     def execute(self, query: str) -> dict:
         """
-        Main execution router for employee AI automations.
+        Main execution router for employee automations.
         """
         q_raw = query.strip()
         q_lower = q_raw.lower()
@@ -67,13 +67,14 @@ class AIAutomationEngine:
             nlp = NLPQueryProcessor(company=self.company)
             result = nlp.process_query(q_raw)
             if result.get("success") and result.get("answer"):
+                clean_ans = self._strip_emojis(result["answer"])
                 return {
                     "success": True,
                     "action_type": "ANALYTICS_QUERY",
-                    "answer": result["answer"],
+                    "answer": clean_ans,
                     "actionLink": {"label": "Open Tasks Dashboard", "href": "/dashboard"},
                 }
-        except Exception as e:
+        except Exception:
             pass
 
         # 8. Friendly ERP Copilot guidance if no pattern matched
@@ -81,17 +82,25 @@ class AIAutomationEngine:
             "success": True,
             "action_type": "GENERAL_GUIDE",
             "answer": (
-                f"🤖 **NSJ AI Automation Copilot**\n\n"
-                f"I can automate tasks directly in your ERP system! Try asking:\n\n"
-                f"• 📋 **Auto-Create Task:** `Create task 18K Ring Polishing for Production due tomorrow urgency High`\n"
-                f"• 🔄 **Update Task Status:** `Mark task '18K Ring' as COMPLETED`\n"
-                f"• 💰 **Instant Jewelry Quote:** `Calculate quote for 14.5g 22K with 12% making charges`\n"
-                f"• 📅 **My Daily Plan:** `What should I work on today?`\n"
-                f"• 🚨 **Bottleneck Scan:** `Scan system bottlenecks and delayed orders`\n"
-                f"• 📊 **Analytics:** `Who completed the most tasks this month?`"
+                "**NSJ ERP Assistant**\n\n"
+                "I can execute tasks and lookups across your ERP system. Try asking:\n\n"
+                "• **Create Task:** `Create task 18K Ring Polishing for Production due tomorrow urgency High`\n"
+                "• **Status Update:** `Mark task '18K Ring' as COMPLETED`\n"
+                "• **Jewelry Quote:** `Calculate quote for 14.5g 22K with 12% making charges`\n"
+                "• **Daily Plan:** `What should I work on today?`\n"
+                "• **Bottleneck Scan:** `Scan system bottlenecks and delayed orders`\n"
+                "• **Analytics:** `Who completed the most tasks this month?`"
             ),
             "actionLink": {"label": "View Tasks", "href": "/dashboard"},
         }
+
+    def _strip_emojis(self, text: str) -> str:
+        """Removes loud emojis from text for clean output"""
+        emoji_pattern = re.compile(
+            "[\U0001f300-\U0001f64f\U0001f680-\U0001f6ff\U0001f900-\U0001f9ff\U0001fa00-\U0001faff\U00002702-\U000027b0\U000024c2-\U0001f251]"
+        )
+        cleaned = emoji_pattern.sub("", text)
+        return cleaned.strip()
 
     # =========================================================================
     # Pattern Matchers
@@ -214,14 +223,12 @@ class AIAutomationEngine:
 
         # 4. Extract Clean Title
         title = query
-        # Remove trigger prefixes like "create task", "add task", etc.
         title = re.sub(
             r"^(?:please\s+)?(?:create|add|schedule|assign)\s+(?:a\s+)?(?:new\s+)?(?:urgent\s+)?task\s*(?::|to|for|-)?\s*",
             "",
             title,
             flags=re.IGNORECASE,
         )
-        # Strip trailing department / urgency / deadline specifications from title
         clean_title = re.sub(
             r"\s+(?:for|in)\s+(?:production|accounts|sales|inventory|design|admin|sourcing|founder)\b.*$",
             "",
@@ -260,7 +267,7 @@ class AIAutomationEngine:
         task = Task.objects.create(
             company=self.company,
             title=clean_title,
-            description=f"Automated task generated via NSJ AI Assistant for {dept}.\nQuery: '{query}'",
+            description=f"Automated task generated via NSJ Assistant for {dept}.\nQuery: '{query}'",
             department=dept,
             urgency=urgency,
             deadline=deadline,
@@ -270,17 +277,16 @@ class AIAutomationEngine:
             assigned_to_name=assigned_user.name if assigned_user else None,
         )
 
-        assignee_display = assigned_user.name if assigned_user else "Unassigned (Team Pool)"
+        assignee_display = assigned_user.name if assigned_user else "Unassigned"
         answer = (
-            f"✅ **AI Task Automation Completed!**\n\n"
-            f"A new task has been registered into the ERP system:\n\n"
-            f"• 📌 **Title:** {task.title}\n"
-            f"• 🏢 **Department:** {task.get_department_display()}\n"
-            f"• ⚡ **Urgency:** {task.urgency}\n"
-            f"• 📅 **Deadline:** {task.deadline.strftime('%A, %d %b %Y')}\n"
-            f"• 👤 **Assigned To:** {assignee_display}\n"
-            f"• 🆔 **Task ID:** `{str(task.id)[:8]}...`\n\n"
-            f"The team has been notified and the task is visible on the board."
+            f"**Task Registered Successfully**\n\n"
+            f"• Title: {task.title}\n"
+            f"• Department: {task.get_department_display()}\n"
+            f"• Urgency: {task.urgency}\n"
+            f"• Deadline: {task.deadline.strftime('%A, %d %b %Y')}\n"
+            f"• Assigned To: {assignee_display}\n"
+            f"• Task ID: `{str(task.id)[:8]}...`\n\n"
+            f"The task is now visible on the board."
         )
 
         return {
@@ -308,7 +314,6 @@ class AIAutomationEngine:
         elif re.search(r"\b(?:need\s+founder|escalate)\b", query, re.IGNORECASE):
             new_status = "NEED_FOUNDER"
 
-        # Search for task matching title keywords
         keywords = re.findall(r"['\"]([^'\"]+)['\"]", query)
         search_term = keywords[0] if keywords else None
 
@@ -330,11 +335,9 @@ class AIAutomationEngine:
         if search_term:
             task = qs.filter(title__icontains=search_term).first()
 
-        # If still not found, get the most recent pending task for this user
         if not task and self.user and self.user.is_authenticated:
             task = qs.filter(assigned_to=self.user, status="PENDING").first()
 
-        # Fallback to most recent pending task
         if not task:
             task = qs.filter(status="PENDING").order_by("-created_at").first()
 
@@ -342,7 +345,7 @@ class AIAutomationEngine:
             return {
                 "success": False,
                 "action_type": "TASK_UPDATE_FAILED",
-                "answer": "⚠️ Could not locate a matching pending task to update. Please specify the task title in quotes, e.g. `Mark task 'Ring Polishing' as completed`.",
+                "answer": "Could not locate a matching pending task to update. Please specify the task title in quotes, e.g. `Mark task 'Ring Polishing' as completed`.",
                 "actionLink": {"label": "Browse Tasks", "href": "/dashboard"},
             }
 
@@ -350,30 +353,28 @@ class AIAutomationEngine:
         task.status = new_status
         if new_status == "COMPLETED":
             task.completed_at = timezone.now()
-            task.completion_notes = "Marked as completed via NSJ AI Assistant automation."
+            task.completion_notes = "Marked as completed via NSJ Assistant."
         task.save()
 
-        # Record Status History
         try:
             TaskStatusHistory.objects.create(
                 task=task,
                 from_status=old_status,
                 to_status=new_status,
                 changed_by=self.user if self.user and self.user.is_authenticated else None,
-                notes="Automated status change triggered by AI Assistant.",
+                notes="Status change triggered via NSJ Assistant.",
             )
         except Exception:
             pass
 
-        status_emoji = "🎉" if new_status == "COMPLETED" else "⚠️"
         answer = (
-            f"{status_emoji} **Task Status Updated Successfully!**\n\n"
-            f"• 📌 **Task:** {task.title}\n"
-            f"• 🏢 **Department:** {task.get_department_display()}\n"
-            f"• 🔄 **Previous Status:** `{old_status}`\n"
-            f"• 🟢 **New Status:** `{new_status}`\n"
-            f"• 🆔 **ID:** `{str(task.id)[:8]}...`\n\n"
-            f"The change has been logged into the audit trail."
+            f"**Task Status Updated**\n\n"
+            f"• Task: {task.title}\n"
+            f"• Department: {task.get_department_display()}\n"
+            f"• Previous Status: `{old_status}`\n"
+            f"• New Status: `{new_status}`\n"
+            f"• ID: `{str(task.id)[:8]}...`\n\n"
+            f"The status change has been recorded in the audit trail."
         )
 
         return {
@@ -392,11 +393,9 @@ class AIAutomationEngine:
         """
         Calculates live gold and jewelry pricing based on weight, purity, making charges, and GST.
         """
-        # 1. Parse Weight (grams)
         weight_match = re.search(r"([0-9]+(?:\.[0-9]+)?)\s*(?:g|gram|grams|gm)\b", query, re.IGNORECASE)
         weight = float(weight_match.group(1)) if weight_match else 10.0
 
-        # 2. Parse Purity
         purity = "22K"
         if re.search(r"\b24k\b", query, re.IGNORECASE):
             purity = "24K"
@@ -407,8 +406,6 @@ class AIAutomationEngine:
         elif re.search(r"\bsilver\b", query, re.IGNORECASE):
             purity = "SILVER"
 
-        # 3. Retrieve Latest Live Gold Rates
-        # Benchmark rates:
         benchmark_rates = {
             "24K": 7450.0,
             "22K": 6830.0,
@@ -418,7 +415,6 @@ class AIAutomationEngine:
         }
         rate_per_gram = benchmark_rates[purity]
 
-        # Check DB for today's rate if available
         try:
             latest_rate = DailyGoldRate.objects.filter(company=self.company).order_by("-rate_date").first()
             if latest_rate:
@@ -435,9 +431,7 @@ class AIAutomationEngine:
         except Exception:
             pass
 
-        # 4. Parse Making Charges
-        # e.g., "12% making", "making 10%", "500 per gram making"
-        making_percent = 12.0  # default 12%
+        making_percent = 12.0
         flat_making_per_gram = 0.0
 
         making_pct_match = re.search(r"([0-9]+(?:\.[0-9]+)?)\s*%\s*(?:making|mc)?", query, re.IGNORECASE)
@@ -449,7 +443,6 @@ class AIAutomationEngine:
         elif making_pct_match:
             making_percent = float(making_pct_match.group(1))
 
-        # 5. Calculate Values
         metal_value = round(weight * rate_per_gram, 2)
         if flat_making_per_gram > 0:
             making_charges = round(weight * flat_making_per_gram, 2)
@@ -457,20 +450,20 @@ class AIAutomationEngine:
             making_charges = round(metal_value * (making_percent / 100.0), 2)
 
         subtotal = round(metal_value + making_charges, 2)
-        gst = round(subtotal * 0.03, 2)  # 3% GST on jewelry
+        gst = round(subtotal * 0.03, 2)
         grand_total = round(subtotal + gst, 2)
 
         answer = (
-            f"💰 **NSJ AI Jewelry Price Quotation:**\n\n"
-            f"• **Metal & Purity:** Gold {purity} Standard\n"
-            f"• **Gross Weight:** {weight:.2f} grams\n"
-            f"• **Current Market Rate:** ₹{rate_per_gram:,.2f} / gram\n"
-            f"• **Base Metal Value:** ₹{metal_value:,.2f}\n"
-            f"• **Making Charges ({making_percent}%):** ₹{making_charges:,.2f}\n"
-            f"• **Subtotal:** ₹{subtotal:,.2f}\n"
-            f"• **GST (3%):** ₹{gst:,.2f}\n\n"
-            f"💎 **Estimated Total Customer Price:** **₹{grand_total:,.2f}**\n\n"
-            f"*Rates subject to daily market fix. Click below to generate an official tax invoice or order estimate.*"
+            f"**Jewelry Price Quotation**\n\n"
+            f"• Metal & Purity: Gold {purity} Standard\n"
+            f"• Gross Weight: {weight:.2f} grams\n"
+            f"• Market Rate: ₹{rate_per_gram:,.2f} / gram\n"
+            f"• Base Metal Value: ₹{metal_value:,.2f}\n"
+            f"• Making Charges ({making_percent}%): ₹{making_charges:,.2f}\n"
+            f"• Subtotal: ₹{subtotal:,.2f}\n"
+            f"• GST (3%): ₹{gst:,.2f}\n\n"
+            f"**Estimated Total Price: ₹{grand_total:,.2f}**\n\n"
+            f"*Rates subject to daily market fix.*"
         )
 
         return {
@@ -498,12 +491,10 @@ class AIAutomationEngine:
         if self.company:
             qs = qs.filter(company=self.company)
 
-        # Filter by user or user department
         dept_filter = None
         if self.user and self.user.is_authenticated:
             if hasattr(self.user, "department") and self.user.department:
                 dept_filter = self.user.department
-            # Prioritize tasks assigned to this user
             user_tasks = qs.filter(Q(assigned_to=self.user) | Q(created_by=self.user))
             if user_tasks.exists():
                 qs = user_tasks
@@ -516,30 +507,30 @@ class AIAutomationEngine:
         upcoming_tasks = qs.filter(deadline__gt=today).order_by("deadline")[:3]
 
         answer = (
-            f"📅 **Your AI Daily Work Planner:**\n\n"
+            f"**Daily Work Summary**\n\n"
             f"You have **{total_pending} active pending tasks** in your pipeline.\n\n"
         )
 
         if overdue_tasks.exists():
-            answer += "🚨 **CRITICAL / OVERDUE (Needs Immediate Attention):**\n"
+            answer += "**Overdue / Needs Attention:**\n"
             for t in overdue_tasks:
-                answer += f"• ⚠️ **{t.title}** ({t.get_department_display()}) — Due: `{t.deadline}` [{t.urgency}]\n"
+                answer += f"• {t.title} ({t.get_department_display()}) — Due: `{t.deadline}` [{t.urgency}]\n"
             answer += "\n"
 
         if today_tasks.exists():
-            answer += "⏳ **DUE TODAY:**\n"
+            answer += "**Due Today:**\n"
             for t in today_tasks:
-                answer += f"• 📌 **{t.title}** — Priority: `{t.urgency}`\n"
+                answer += f"• {t.title} — Priority: `{t.urgency}`\n"
             answer += "\n"
 
         if upcoming_tasks.exists():
-            answer += "📋 **UPCOMING THIS WEEK:**\n"
+            answer += "**Upcoming This Week:**\n"
             for t in upcoming_tasks:
-                answer += f"• 🔹 {t.title} (Due: {t.deadline.strftime('%d %b')})\n"
+                answer += f"• {t.title} (Due: {t.deadline.strftime('%d %b')})\n"
             answer += "\n"
 
         if total_pending == 0:
-            answer += "🎉 **All caught up!** No pending tasks are currently waiting on you. Excellent work!"
+            answer += "No pending tasks are currently waiting on you."
 
         return {
             "success": True,
@@ -564,32 +555,29 @@ class AIAutomationEngine:
         overdue_count = overdue_tasks.count()
 
         answer = (
-            f"🚨 **AI Production & Task Bottleneck Diagnostic:**\n\n"
-            f"System scan completed across all active departments:\n\n"
-            f"• 🛑 **Stuck / Blocked Tasks:** {stuck_count}\n"
-            f"• ⏰ **Overdue Deadlines:** {overdue_count}\n\n"
+            f"**Production & Task Bottleneck Report**\n\n"
+            f"• Blocked Tasks: {stuck_count}\n"
+            f"• Overdue Deadlines: {overdue_count}\n\n"
         )
 
         if stuck_count > 0:
-            answer += "⚠️ **Blocked Work Items Requiring Intervention:**\n"
+            answer += "**Tasks Requiring Attention:**\n"
             for t in stuck_tasks[:4]:
-                answer += f"• 🔴 **{t.title}** ({t.get_department_display()}) — Status: `{t.status}`\n"
+                answer += f"• {t.title} ({t.get_department_display()}) — Status: `{t.status}`\n"
             answer += "\n"
 
         if overdue_count > 0:
-            answer += "⏳ **Top Overdue Tasks:**\n"
+            answer += "**Overdue Tasks:**\n"
             for t in overdue_tasks[:4]:
                 days_late = (today - t.deadline).days
-                answer += f"• ⏳ **{t.title}** — `{days_late} days overdue` [{t.urgency}]\n"
+                answer += f"• {t.title} — `{days_late} days overdue` [{t.urgency}]\n"
             answer += "\n"
-
-        answer += "💡 **AI Recommendation:** Click below to reassign or escalate these items to department heads."
 
         return {
             "success": True,
             "action_type": "BOTTLENECK_SCAN",
             "answer": answer,
-            "actionLink": {"label": "View Bottlenecks in Dashboard", "href": "/dashboard"},
+            "actionLink": {"label": "View Tasks in Dashboard", "href": "/dashboard"},
         }
 
     def _handle_orders_inventory(self) -> dict:
@@ -605,24 +593,18 @@ class AIAutomationEngine:
         recent_orders = order_qs.order_by("-created_at")[:5]
 
         answer = (
-            f"📦 **Orders & Inventory Quick Diagnostic:**\n\n"
-            f"• **Total Registered Orders:** {total_orders}\n"
-            f"• **Recent Order Activity:**\n"
+            f"**Orders & Inventory Summary**\n\n"
+            f"• Total Orders: {total_orders}\n"
+            f"• Recent Orders:\n"
         )
 
         if recent_orders.exists():
             for o in recent_orders:
                 order_num = getattr(o, "order_number", getattr(o, "series", str(o.id)[:8]))
-                customer = getattr(o, "customer_name", "Valued Client")
-                answer += f"  • 🏷️ **Order #{order_num}** ({customer})\n"
+                customer = getattr(o, "customer_name", "Client")
+                answer += f"  • Order #{order_num} ({customer})\n"
         else:
-            answer += "  • No active orders found in database.\n"
-
-        answer += (
-            f"\n📊 **Raw Materials Status:**\n"
-            f"• Gold Bullion: Active daily rate synchronized\n"
-            f"• Loose Diamonds: Parcel tracking operational\n"
-        )
+            answer += "  • No active orders found.\n"
 
         return {
             "success": True,

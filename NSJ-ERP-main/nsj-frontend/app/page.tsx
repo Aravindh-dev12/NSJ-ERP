@@ -3,32 +3,23 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useAuth } from "@/lib/auth";
 import {
-  Sparkles,
   ArrowRight,
-  TrendingUp,
-  Coins,
-  Gem,
-  Factory,
-  FileSpreadsheet,
-  Users,
-  CheckCircle2,
   LogIn,
   UserPlus,
-  KeyRound,
-  Bot,
-  ChevronRight,
   Check,
-  Building2,
-  Clock,
-  ShieldCheck,
+  Copy,
+  Factory,
+  Gem,
+  FileSpreadsheet,
+  Layers,
+  CheckSquare,
+  TrendingUp,
 } from "lucide-react";
 
 export default function HomePage() {
   const { user, loading } = useAuth();
-  const router = useRouter();
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
 
   const handleCopy = (text: string, key: string) => {
@@ -39,7 +30,7 @@ export default function HomePage() {
 
   const handleOpenChat = () => {
     const chatBtn = document.querySelector(
-      'button[aria-label="Open AI Assistant"]'
+      'button[aria-label="Open Assistant"]'
     ) as HTMLButtonElement;
     if (chatBtn) {
       chatBtn.click();
@@ -47,81 +38,61 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 flex flex-col selection:bg-amber-100 selection:text-amber-900">
-      {/* 1. TOP ANNOUNCEMENT BAR */}
-      <div className="bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 px-4 py-2 text-center text-xs font-semibold text-slate-950 tracking-wide flex items-center justify-center gap-2 shadow-sm">
-        <Sparkles className="h-3.5 w-3.5 text-slate-950 animate-pulse" />
-        <span>NSJ Jewelry Enterprise ERP System • Full-Stack Production, Inventory & Accounting</span>
-        <span className="hidden sm:inline-block rounded-full bg-slate-950/15 px-2 py-0.5 text-[10px] font-bold">
-          v2.0 Live
-        </span>
-      </div>
-
-      {/* 2. MAIN HEADER (NAVBAR - WHITE THEME) */}
-      <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur-md shadow-sm">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3.5 sm:px-6 lg:px-8">
-          {/* Logo & Brand */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative flex h-11 w-11 items-center justify-center rounded-xl border border-amber-300 bg-white p-1 shadow-sm transition-transform group-hover:scale-105">
+    <div className="min-h-screen bg-white text-slate-900 flex flex-col font-sans">
+      {/* 1. MINIMAL WHITE HEADER */}
+      <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur-xs">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+          {/* Brand */}
+          <Link href="/" className="flex items-center gap-3">
+            <div className="relative flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white p-1">
               <Image
                 src="/logo.png"
-                alt="NSJ ERP Logo"
-                width={42}
-                height={42}
+                alt="NSJ ERP"
+                width={36}
+                height={36}
                 className="object-contain"
                 priority
               />
             </div>
             <div>
-              <div className="flex items-center gap-2">
-                <span className="text-lg font-extrabold tracking-tight text-slate-900 group-hover:text-amber-600 transition-colors">
-                  NSJ ERP
-                </span>
-                <span className="rounded-md bg-amber-100 border border-amber-300 px-1.5 py-0.5 text-[10px] font-bold text-amber-800">
-                  JEWELS
-                </span>
-              </div>
-              <p className="text-[11px] text-slate-500 font-medium">Enterprise Resource Planning</p>
+              <span className="text-base font-bold tracking-tight text-slate-900">
+                Niti Shah Jewels
+              </span>
+              <span className="text-xs text-slate-500 block -mt-0.5">ERP System</span>
             </div>
           </Link>
 
           {/* Navigation Links */}
-          <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
-            <a href="#modules" className="hover:text-amber-600 transition-colors">
+          <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+            <a href="#rates" className="hover:text-slate-900 transition-colors">
+              Live Rates
+            </a>
+            <a href="#modules" className="hover:text-slate-900 transition-colors">
               Modules
             </a>
-            <a href="#production" className="hover:text-amber-600 transition-colors">
-              Production Workflow
-            </a>
-            <a href="#rates" className="hover:text-amber-600 transition-colors">
-              Live Rates
+            <a href="#workflow" className="hover:text-slate-900 transition-colors">
+              Production
             </a>
             <button
               onClick={handleOpenChat}
-              className="flex items-center gap-1.5 hover:text-amber-600 transition-colors text-slate-600 font-semibold"
+              className="hover:text-slate-900 transition-colors cursor-pointer"
             >
-              <Bot className="h-4 w-4 text-amber-600" />
-              <span>AI Assistant</span>
+              Assistant
             </button>
           </nav>
 
-          {/* Right Action: Sign In, Sign Up, or Dashboard */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            <div className="hidden lg:flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs text-emerald-700 font-semibold">
-              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>System Online</span>
-            </div>
-
+          {/* Auth Action Buttons */}
+          <div className="flex items-center gap-3">
             {loading ? (
-              <div className="h-9 w-24 rounded-lg bg-slate-100 animate-pulse" />
+              <div className="h-8 w-20 rounded bg-slate-100 animate-pulse" />
             ) : user ? (
-              <div className="flex items-center gap-2 sm:gap-3">
+              <div className="flex items-center gap-3">
                 <span className="hidden sm:inline-block text-xs text-slate-600">
-                  Welcome, <span className="font-bold text-slate-900">{user.name || user.email}</span>
+                  {user.name || user.email}
                 </span>
                 <Link
                   href="/dashboard"
-                  className="flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-amber-500 to-yellow-600 px-4 py-2 text-xs sm:text-sm font-bold text-slate-950 shadow-md hover:from-amber-600 hover:to-yellow-700 hover:shadow-lg transition-all"
+                  className="flex items-center gap-1.5 rounded-lg bg-slate-900 px-4 py-2 text-xs sm:text-sm font-medium text-white hover:bg-slate-800 transition-colors"
                 >
                   <span>Dashboard</span>
                   <ArrowRight className="h-4 w-4" />
@@ -131,18 +102,15 @@ export default function HomePage() {
               <div className="flex items-center gap-2">
                 <Link
                   href="/login"
-                  className="flex items-center gap-1.5 rounded-lg border border-slate-300 hover:border-slate-400 bg-white hover:bg-slate-50 px-3.5 py-2 text-xs sm:text-sm font-bold text-slate-700 transition-colors"
+                  className="rounded-lg border border-slate-300 bg-white hover:bg-slate-50 px-3.5 py-1.5 text-xs sm:text-sm font-medium text-slate-700 transition-colors"
                 >
-                  <LogIn className="h-4 w-4 text-slate-500" />
-                  <span>Sign In</span>
+                  Sign In
                 </Link>
-
                 <Link
                   href="/register"
-                  className="flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 px-4 sm:px-5 py-2 text-xs sm:text-sm font-bold text-slate-950 shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-95 transition-all"
+                  className="rounded-lg bg-slate-900 hover:bg-slate-800 px-4 py-1.5 text-xs sm:text-sm font-medium text-white transition-colors"
                 >
-                  <UserPlus className="h-4 w-4" />
-                  <span>Sign Up</span>
+                  Sign Up
                 </Link>
               </div>
             )}
@@ -150,500 +118,250 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* 3. HERO SECTION (WHITE THEME) */}
-      <section className="relative overflow-hidden pt-12 pb-20 md:pt-16 md:pb-24 bg-gradient-to-b from-amber-50/40 via-white to-slate-50/60">
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 rounded-full border border-amber-300 bg-amber-50 px-4 py-1.5 text-xs font-bold text-amber-800 shadow-sm mb-6">
-            <Sparkles className="h-3.5 w-3.5 text-amber-600" />
-            <span>Intelligent Jewelry Enterprise Platform</span>
-          </div>
-
-          {/* Headline */}
-          <h1 className="mx-auto max-w-4xl text-3xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-slate-950 leading-tight">
-            Precision Management for{" "}
-            <span className="bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-700 bg-clip-text text-transparent">
-              Fine Jewelry Operations
-            </span>
+      {/* 2. SIMPLE HERO SECTION */}
+      <section className="bg-white py-16 sm:py-24 border-b border-slate-200">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center">
+          <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-950 leading-tight">
+            Jewelry Enterprise Management System
           </h1>
-
-          {/* Subheading */}
-          <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-            From pure 24K gold bullion and certified diamond inventory to 3D CAD casting, 
-            seven-step workshop quality assurance, and automated voucher accounting — with integrated AI assistance.
+          <p className="mt-5 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            Integrated operations for fine jewelry manufacturing, certified diamond inventory, 
+            gold bullion accounting, and customer order fulfillment.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+          {/* Call to Actions */}
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
               href={user ? "/dashboard" : "/login"}
-              className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-600 px-6 py-3.5 text-sm sm:text-base font-bold text-slate-950 shadow-lg shadow-amber-500/20 hover:from-amber-600 hover:to-yellow-700 hover:scale-105 active:scale-95 transition-all"
+              className="flex items-center gap-2 rounded-lg bg-slate-900 hover:bg-slate-800 px-5 py-2.5 text-sm font-medium text-white transition-colors shadow-2xs"
             >
-              <LogIn className="h-5 w-5" />
-              <span>{user ? "Open ERP Dashboard" : "Sign In to ERP Portal"}</span>
-              <ArrowRight className="h-4 w-4" />
+              <LogIn className="h-4 w-4" />
+              <span>{user ? "Open Dashboard" : "Sign In to ERP"}</span>
             </Link>
 
             <Link
               href="/register"
-              className="flex items-center gap-2 rounded-xl border-2 border-slate-300 bg-white hover:border-amber-500 hover:bg-amber-50/50 px-6 py-3.5 text-sm sm:text-base font-bold text-slate-800 shadow-sm transition-all active:scale-95"
+              className="flex items-center gap-2 rounded-lg border border-slate-300 bg-white hover:bg-slate-50 px-5 py-2.5 text-sm font-medium text-slate-700 transition-colors"
             >
-              <UserPlus className="h-5 w-5 text-amber-600" />
-              <span>Create Account (Sign Up)</span>
+              <UserPlus className="h-4 w-4" />
+              <span>Create Account</span>
             </Link>
-
-            <button
-              onClick={handleOpenChat}
-              className="flex items-center gap-2 rounded-xl border border-amber-200 bg-amber-50/70 hover:bg-amber-100/70 px-5 py-3.5 text-sm sm:text-base font-bold text-amber-900 shadow-sm transition-all active:scale-95"
-            >
-              <Bot className="h-5 w-5 text-amber-600" />
-              <span>Ask AI Assistant</span>
-            </button>
           </div>
 
-          {/* Quick Sign-In Credentials Card (White Theme) */}
-          <div className="mx-auto mt-12 max-w-2xl rounded-2xl border border-slate-200 bg-white p-5 shadow-xl text-left">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-              <div className="flex items-center gap-2">
-                <KeyRound className="h-4 w-4 text-amber-600" />
-                <h3 className="text-xs sm:text-sm font-bold text-slate-900 tracking-wide">
-                  Quick Sign-In Access Credentials
-                </h3>
-              </div>
-              <span className="rounded bg-slate-100 px-2 py-0.5 text-[11px] text-slate-600 font-medium">
-                Tap to copy
+          {/* Quick Access Credentials Box */}
+          <div className="mx-auto mt-12 max-w-xl rounded-xl border border-slate-200 bg-slate-50/60 p-4 text-left">
+            <div className="flex items-center justify-between pb-2 mb-3 border-b border-slate-200">
+              <span className="text-xs font-semibold text-slate-800">
+                Default Access Credentials
               </span>
+              <span className="text-[11px] text-slate-500">Tap to copy</span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-              {/* Founder Account */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+              {/* Founder */}
               <div
                 onClick={() => handleCopy("niti@nsj.com", "founder")}
-                className="cursor-pointer rounded-xl border border-amber-200 bg-amber-50/50 p-3 hover:bg-amber-100/60 transition-colors"
+                className="cursor-pointer rounded-lg border border-slate-200 bg-white p-3 hover:border-slate-300 transition-colors"
               >
-                <div className="flex items-center justify-between">
-                  <span className="font-bold text-amber-900">👑 Founder / Admin</span>
+                <div className="flex items-center justify-between text-slate-900 font-medium">
+                  <span>Founder Account</span>
                   {copiedKey === "founder" ? (
-                    <span className="text-[10px] text-emerald-600 font-bold flex items-center gap-0.5">
-                      <Check className="h-3 w-3" /> Copied!
+                    <span className="text-[11px] text-emerald-600 font-semibold flex items-center gap-1">
+                      <Check className="h-3 w-3" /> Copied
                     </span>
                   ) : (
-                    <span className="text-[10px] text-amber-700">Copy</span>
+                    <Copy className="h-3 w-3 text-slate-400" />
                   )}
                 </div>
-                <div className="mt-2 text-slate-700 space-y-0.5 font-mono">
-                  <p>Email: <span className="text-slate-950 font-bold">niti@nsj.com</span></p>
-                  <p>Pass: <span className="text-slate-950 font-bold">admin123</span></p>
+                <div className="mt-1.5 text-slate-600 space-y-0.5 font-mono text-[11px]">
+                  <p>Email: <span className="text-slate-900 font-semibold">niti@nsj.com</span></p>
+                  <p>Password: <span className="text-slate-900 font-semibold">admin123</span></p>
                 </div>
               </div>
 
-              {/* Superuser Account */}
+              {/* Superuser */}
               <div
                 onClick={() => handleCopy("admin123@gmail.com", "superuser")}
-                className="cursor-pointer rounded-xl border border-slate-200 bg-slate-50 p-3 hover:bg-slate-100 transition-colors"
+                className="cursor-pointer rounded-lg border border-slate-200 bg-white p-3 hover:border-slate-300 transition-colors"
               >
-                <div className="flex items-center justify-between">
-                  <span className="font-bold text-slate-800">⚡ Superuser / Tech</span>
+                <div className="flex items-center justify-between text-slate-900 font-medium">
+                  <span>Administrator</span>
                   {copiedKey === "superuser" ? (
-                    <span className="text-[10px] text-emerald-600 font-bold flex items-center gap-0.5">
-                      <Check className="h-3 w-3" /> Copied!
+                    <span className="text-[11px] text-emerald-600 font-semibold flex items-center gap-1">
+                      <Check className="h-3 w-3" /> Copied
                     </span>
                   ) : (
-                    <span className="text-[10px] text-slate-500">Copy</span>
+                    <Copy className="h-3 w-3 text-slate-400" />
                   )}
                 </div>
-                <div className="mt-2 text-slate-700 space-y-0.5 font-mono">
-                  <p>Email: <span className="text-slate-950 font-bold">admin123@gmail.com</span></p>
-                  <p>Pass: <span className="text-slate-950 font-bold">admin123</span></p>
+                <div className="mt-1.5 text-slate-600 space-y-0.5 font-mono text-[11px]">
+                  <p>Email: <span className="text-slate-900 font-semibold">admin123@gmail.com</span></p>
+                  <p>Password: <span className="text-slate-900 font-semibold">admin123</span></p>
                 </div>
               </div>
             </div>
-
-            <div className="mt-3.5 flex items-center justify-between text-xs pt-2 border-t border-slate-100">
-              <Link
-                href="/login"
-                className="font-bold text-amber-600 hover:text-amber-700 hover:underline flex items-center gap-1"
-              >
-                <span>Go to Sign In</span>
-                <ChevronRight className="h-3.5 w-3.5" />
-              </Link>
-              <Link
-                href="/register"
-                className="font-bold text-slate-600 hover:text-slate-900 hover:underline flex items-center gap-1"
-              >
-                <span>Or Create New Account</span>
-                <ChevronRight className="h-3.5 w-3.5" />
-              </Link>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* 4. LIVE RATES TICKER (WHITE THEME) */}
-      <section id="rates" className="border-y border-slate-200 bg-white py-6">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2 text-xs font-bold text-amber-800 tracking-wider uppercase">
-              <Coins className="h-4 w-4 text-amber-600" />
-              <span>Live Indicative Daily Metal Rates</span>
+      {/* 3. LIVE METAL RATES (CLEAN WHITE TABLE) */}
+      <section id="rates" className="bg-slate-50/50 py-12 border-b border-slate-200">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
+            <div>
+              <h2 className="text-xl font-bold tracking-tight text-slate-950">
+                Today's Metal Market Rates
+              </h2>
+              <p className="text-xs text-slate-500 mt-0.5">
+                Benchmark rates used across voucher calculations and client estimates.
+              </p>
             </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 w-full md:w-auto">
-              <div className="rounded-xl bg-amber-50/70 border border-amber-200/90 px-4 py-2.5 text-center">
-                <p className="text-[11px] font-semibold text-slate-600">Gold 24K (99.9%)</p>
-                <p className="text-base font-extrabold text-amber-700">₹7,450 / g</p>
-              </div>
-              <div className="rounded-xl bg-amber-50/70 border border-amber-200/90 px-4 py-2.5 text-center">
-                <p className="text-[11px] font-semibold text-slate-600">Gold 22K (Jewelry)</p>
-                <p className="text-base font-extrabold text-amber-700">₹6,830 / g</p>
-              </div>
-              <div className="rounded-xl bg-amber-50/70 border border-amber-200/90 px-4 py-2.5 text-center">
-                <p className="text-[11px] font-semibold text-slate-600">Gold 18K (Diamond)</p>
-                <p className="text-base font-extrabold text-amber-700">₹5,590 / g</p>
-              </div>
-              <div className="rounded-xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-center">
-                <p className="text-[11px] font-semibold text-slate-600">Fine Silver 999</p>
-                <p className="text-base font-extrabold text-slate-800">₹89,500 / kg</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. CORE MODULES GRID (WHITE THEME) */}
-      <section id="modules" className="py-16 sm:py-24 bg-slate-50/60">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-xs font-extrabold uppercase tracking-wider text-amber-600">
-              Complete Business Coverage
-            </span>
-            <h2 className="mt-2 text-2xl sm:text-4xl font-extrabold text-slate-950">
-              Enterprise Modules Built for Jewelry
-            </h2>
-            <p className="mt-3 text-sm sm:text-base text-slate-600 font-normal">
-              Engineered for manufacturing precision, metal tunch weight reconciliation, diamond sieve lotting, and multi-department collaboration.
-            </p>
+            <span className="mt-2 sm:mt-0 text-xs text-slate-500">Updated Daily</span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Module 1 */}
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-lg hover:border-amber-300 transition-all hover:-translate-y-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-100 text-amber-700 mb-4 border border-amber-200">
-                <FileSpreadsheet className="h-6 w-6" />
-              </div>
-              <h3 className="text-lg font-bold text-slate-900">Accounting & Vouchers</h3>
-              <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Full-featured Receipt, Payment, Journal, and Contra vouchers. Generate automated GST tax invoices with exact gold and gemstone weights.
-              </p>
-              <ul className="mt-4 space-y-1.5 text-xs text-slate-700">
-                <li className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
-                  <span>PDF Tax Invoices & Customer Estimates</span>
-                </li>
-                <li className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
-                  <span>Cash & Bank Ledger Statements</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Module 2 */}
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-lg hover:border-indigo-300 transition-all hover:-translate-y-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-100 text-indigo-700 mb-4 border border-indigo-200">
-                <Factory className="h-6 w-6" />
-              </div>
-              <h3 className="text-lg font-bold text-slate-900">Production & Manufacturing</h3>
-              <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Tracks each job through 7 stages: CAD 3D design, CAM resin printing, Ghat casting, diamond bagging, setting, polishing, and final QC.
-              </p>
-              <ul className="mt-4 space-y-1.5 text-xs text-slate-700">
-                <li className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
-                  <span>Metal Issue & Receive Reconciliation</span>
-                </li>
-                <li className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
-                  <span>Setter Diamond Bagging Logs</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Module 3 */}
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-lg hover:border-cyan-300 transition-all hover:-translate-y-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-100 text-cyan-700 mb-4 border border-cyan-200">
-                <Gem className="h-6 w-6" />
-              </div>
-              <h3 className="text-lg font-bold text-slate-900">Diamonds & Raw Materials</h3>
-              <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Granular inventory of certified loose diamonds, gemstones, pearls, and pure bullion. Tracks cut, clarity, color, and carat weights.
-              </p>
-              <ul className="mt-4 space-y-1.5 text-xs text-slate-700">
-                <li className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
-                  <span>Real-time Vault Valuation</span>
-                </li>
-                <li className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
-                  <span>Purchase & Vendor History</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Module 4 */}
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-lg hover:border-yellow-300 transition-all hover:-translate-y-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-100 text-yellow-700 mb-4 border border-yellow-200">
-                <TrendingUp className="h-6 w-6" />
-              </div>
-              <h3 className="text-lg font-bold text-slate-900">Daily Gold Rate Engine</h3>
-              <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Feeds daily market metal rates across 24K, 22K, 20K, 18K, 14K, and 10K. Automatically updates cost calculations on orders.
-              </p>
-              <ul className="mt-4 space-y-1.5 text-xs text-slate-700">
-                <li className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
-                  <span>Historical Rate Charts</span>
-                </li>
-                <li className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
-                  <span>Party-specific Gold Rate Profiles</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Module 5 */}
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-lg hover:border-rose-300 transition-all hover:-translate-y-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-rose-100 text-rose-700 mb-4 border border-rose-200">
-                <Users className="h-6 w-6" />
-              </div>
-              <h3 className="text-lg font-bold text-slate-900">Sales CRM & Custom Orders</h3>
-              <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Log customer inquiries, design references, and photo uploads. Convert sales queries directly into estimates and confirmed job orders.
-              </p>
-              <ul className="mt-4 space-y-1.5 text-xs text-slate-700">
-                <li className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
-                  <span>Customer Follow-Up Timeline</span>
-                </li>
-                <li className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
-                  <span>Estimate-to-Order Conversion</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Module 6 */}
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-lg hover:border-purple-300 transition-all hover:-translate-y-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-100 text-purple-700 mb-4 border border-purple-200">
-                <Bot className="h-6 w-6" />
-              </div>
-              <h3 className="text-lg font-bold text-slate-900">Intelligent AI Assistant</h3>
-              <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Floating conversational assistant ready 24/7. Ask questions in natural language about tasks, orders, vouchers, or rates.
-              </p>
-              <ul className="mt-4 space-y-1.5 text-xs text-slate-700">
-                <li className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
-                  <span>Instant Natural Language Query Engine</span>
-                </li>
-                <li className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
-                  <span>Floating Logo Icon on All Pages</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. PRODUCTION WORKFLOW SECTION (WHITE THEME) */}
-      <section id="production" className="border-t border-slate-200 bg-white py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-xs font-extrabold uppercase tracking-wider text-amber-600">
-              End-to-End Workflow
-            </span>
-            <h2 className="mt-2 text-2xl sm:text-4xl font-extrabold text-slate-950">
-              7 Stages of Jewelry Craftsmanship
-            </h2>
-            <p className="mt-3 text-sm sm:text-base text-slate-600">
-              Real-time accountability with photo verification, weight checks, and sign-offs at every step.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
             {[
-              { step: "01", title: "Customer Query & Estimate", desc: "Design specs, gold purity, stone carat estimates" },
-              { step: "02", title: "3D CAD Modeling", desc: "Matrix/Rhino 3D CAD design approval & 3D CAM resin printing" },
-              { step: "03", title: "Ghat Casting & Inspection", desc: "Gold casting, gross weight check, and metal purity validation" },
-              { step: "04", title: "Diamond & Stone Bagging", desc: "Precision stone allocation & setter assignment" },
-              { step: "05", title: "Master Setting", desc: "Prong, channel, pave setting & microscopic alignment" },
-              { step: "06", title: "Pre-Rhodium & Polish", desc: "Surface buffing, ultrasonic cleaning, and rhodium plating" },
-              { step: "07", title: "Final QC & Dispatch", desc: "Hallmark verification, packaging, and tax invoice generation" },
-            ].map((item, i) => (
+              { metal: "Gold 24K", purity: "99.9% Pure", rate: "₹7,450 / g" },
+              { metal: "Gold 22K", purity: "Jewelry Standard", rate: "₹6,830 / g" },
+              { metal: "Gold 18K", purity: "Diamond Jewelry", rate: "₹5,590 / g" },
+              { metal: "Gold 14K", purity: "Export Quality", rate: "₹4,340 / g" },
+              { metal: "Fine Silver", purity: "99.9% Pure", rate: "₹89.50 / g" },
+            ].map((item, idx) => (
               <div
-                key={i}
-                className="rounded-xl border border-slate-200 bg-slate-50/70 p-5 relative overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                key={idx}
+                className="rounded-xl border border-slate-200 bg-white p-3.5 shadow-2xs"
               >
-                <span className="text-3xl font-extrabold text-amber-500/20 absolute top-3 right-4">
-                  {item.step}
-                </span>
-                <p className="text-xs font-bold text-amber-700 uppercase tracking-wider">Step {item.step}</p>
-                <h4 className="mt-1 text-sm font-bold text-slate-900">{item.title}</h4>
-                <p className="mt-2 text-xs text-slate-600 leading-relaxed">{item.desc}</p>
+                <div className="text-xs font-semibold text-slate-900">{item.metal}</div>
+                <div className="text-[11px] text-slate-500">{item.purity}</div>
+                <div className="mt-2 text-sm font-bold text-slate-950">{item.rate}</div>
               </div>
             ))}
-
-            {/* Quick action card */}
-            <div className="rounded-xl border border-amber-300 bg-gradient-to-br from-amber-50 via-yellow-50 to-white p-5 flex flex-col justify-between shadow-sm">
-              <div>
-                <Sparkles className="h-6 w-6 text-amber-600" />
-                <h4 className="mt-2 text-sm font-bold text-slate-900">Track Order Progress</h4>
-                <p className="mt-1 text-xs text-slate-600">
-                  Log in or sign up to inspect active workshop stages and assignee status.
-                </p>
-              </div>
-              <div className="mt-4 flex items-center gap-3">
-                <Link
-                  href="/login"
-                  className="inline-flex items-center gap-1 text-xs font-bold text-amber-700 hover:text-amber-800"
-                >
-                  <span>Sign In</span>
-                  <ChevronRight className="h-3.5 w-3.5" />
-                </Link>
-                <span className="text-slate-300">•</span>
-                <Link
-                  href="/register"
-                  className="inline-flex items-center gap-1 text-xs font-bold text-slate-700 hover:text-slate-900"
-                >
-                  <span>Sign Up</span>
-                  <ChevronRight className="h-3.5 w-3.5" />
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* 7. CALLOUT BANNER / "TOP FOOTER" ASSISTANT PROMPT (WHITE THEME) */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-        <div className="rounded-3xl border border-amber-200 bg-gradient-to-r from-amber-50 via-orange-50/40 to-amber-50 p-6 sm:p-10 shadow-lg relative overflow-hidden">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-4">
-              <div className="relative flex h-14 w-14 sm:h-16 sm:w-16 shrink-0 items-center justify-center rounded-2xl border border-amber-300 bg-white p-1.5 shadow-md">
-                <Image
-                  src="/logo.png"
-                  alt="NSJ"
-                  width={52}
-                  height={52}
-                  className="object-contain"
-                />
-                <span className="absolute -top-1 -right-1 flex h-4 w-4">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-4 w-4 bg-emerald-500 border-2 border-white"></span>
-                </span>
-              </div>
-              <div>
-                <h3 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-2">
-                  <span>Have Questions? Ask Our AI Assistant</span>
-                  <span className="text-amber-800 text-xs px-2 py-0.5 rounded-full border border-amber-300 bg-amber-100 font-bold">
-                    Live
-                  </span>
-                </h3>
-                <p className="mt-1 text-xs sm:text-sm text-slate-600 max-w-xl">
-                  Look for the floating NSJ logo in the bottom right corner of your screen at any time to check gold rates, production progress, or voucher steps.
-                </p>
-              </div>
-            </div>
+      {/* 4. CORE MODULES (CLEAN WHITE CARDS) */}
+      <section id="modules" className="bg-white py-16 border-b border-slate-200">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="mb-10 text-center max-w-xl mx-auto">
+            <h2 className="text-2xl font-bold tracking-tight text-slate-950">
+              Enterprise Modules
+            </h2>
+            <p className="text-sm text-slate-600 mt-1">
+              End-to-end tooling designed specifically for fine jewelry business workflows.
+            </p>
+          </div>
 
-            <div className="flex items-center gap-3 shrink-0">
-              <button
-                onClick={handleOpenChat}
-                className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-600 px-5 py-3 text-xs sm:text-sm font-bold text-slate-950 shadow-md hover:from-amber-600 hover:to-yellow-700 transition-all active:scale-95"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {[
+              {
+                icon: Factory,
+                title: "Workshop Production & Casting",
+                desc: "3D CAD matrix designs, CAM wax printing, vacuum casting, filing, stone setting, polish, and hallmarking.",
+              },
+              {
+                icon: Gem,
+                title: "Diamond & Stone Inventory",
+                desc: "Carat weight, color, clarity, cut tracking with lab certificate verification (GIA/IGI) and vault audits.",
+              },
+              {
+                icon: FileSpreadsheet,
+                title: "Accounting & GST Invoices",
+                desc: "Receipt vouchers, payment vouchers, contra entries, journal adjustments, and tax invoices with metal balance ledgers.",
+              },
+              {
+                icon: Layers,
+                title: "Custom & Stock Orders",
+                desc: "Bespoke design specifications, stock jewelry catalog, stage-by-stage artisan tracking, and delivery dispatch.",
+              },
+              {
+                icon: CheckSquare,
+                title: "Task & Workflow Coordination",
+                desc: "Departmental task assignment, priority deadlines, status tracking, bottleneck detection, and daily work plans.",
+              },
+              {
+                icon: TrendingUp,
+                title: "Bullion & Master Data",
+                desc: "Daily gold price logs, party-specific rate contracts, customer master databases, and department permissions.",
+              },
+            ].map((mod, idx) => (
+              <div
+                key={idx}
+                className="rounded-xl border border-slate-200 bg-white p-5 hover:border-slate-300 transition-colors"
               >
-                <Bot className="h-4 w-4" />
-                <span>Launch Assistant Now</span>
-              </button>
-            </div>
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 text-slate-700 mb-3">
+                  <mod.icon className="h-5 w-5" />
+                </div>
+                <h3 className="text-sm font-semibold text-slate-900">{mod.title}</h3>
+                <p className="mt-1.5 text-xs text-slate-600 leading-relaxed">{mod.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 8. COMPREHENSIVE FOOTER (WHITE / LIGHT THEME) */}
-      <footer className="mt-auto border-t border-slate-200 bg-slate-50 py-12 text-slate-600 text-xs">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
-            {/* Col 1: Brand */}
-            <div>
-              <div className="flex items-center gap-2.5 mb-3">
-                <div className="h-8 w-8 rounded-lg bg-white p-0.5 border border-amber-300 shadow-sm flex items-center justify-center">
-                  <Image src="/logo.png" alt="NSJ" width={28} height={28} className="object-contain" />
-                </div>
-                <span className="font-bold text-base text-slate-900">NSJ ERP</span>
-              </div>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Niti Shah Jewels Enterprise System. Purpose-built resource planning for jewelry designers, manufacturers, wholesalers, and luxury retailers.
-              </p>
-              <div className="mt-3 text-[11px] text-amber-700 font-bold">
-                Crafting Excellence with Technology
-              </div>
-            </div>
-
-            {/* Col 2: Core Modules */}
-            <div>
-              <h4 className="font-bold text-slate-900 text-xs uppercase tracking-wider mb-3">
-                ERP Modules
-              </h4>
-              <ul className="space-y-2">
-                <li><Link href={user ? "/vouchers" : "/login"} className="hover:text-amber-600 transition-colors">Vouchers & Accounting</Link></li>
-                <li><Link href={user ? "/process" : "/login"} className="hover:text-amber-600 transition-colors">Manufacturing & CAD</Link></li>
-                <li><Link href={user ? "/gold-rates" : "/login"} className="hover:text-amber-600 transition-colors">Daily Gold Price Feeding</Link></li>
-                <li><Link href={user ? "/raw-material-purchase" : "/login"} className="hover:text-amber-600 transition-colors">Diamond & Gemstone Vault</Link></li>
-                <li><Link href={user ? "/daily-log" : "/login"} className="hover:text-amber-600 transition-colors">Tasks & Performance Logs</Link></li>
-              </ul>
-            </div>
-
-            {/* Col 3: Portal Access */}
-            <div>
-              <h4 className="font-bold text-slate-900 text-xs uppercase tracking-wider mb-3">
-                Portal Access
-              </h4>
-              <ul className="space-y-2">
-                <li><Link href="/login" className="hover:text-amber-600 transition-colors font-bold text-amber-700">Sign In to Account →</Link></li>
-                <li><Link href="/register" className="hover:text-amber-600 transition-colors font-bold text-slate-800">Create Account (Sign Up) →</Link></li>
-                <li><Link href={user ? "/dashboard" : "/login"} className="hover:text-amber-600 transition-colors">Founder Dashboard</Link></li>
-                <li><button onClick={handleOpenChat} className="text-left hover:text-amber-600 transition-colors">Ask AI Assistant</button></li>
-              </ul>
-            </div>
-
-            {/* Col 4: System Architecture */}
-            <div>
-              <h4 className="font-bold text-slate-900 text-xs uppercase tracking-wider mb-3">
-                System Environment
-              </h4>
-              <div className="space-y-1.5 text-[11px]">
-                <p className="flex items-center gap-1.5">
-                  <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                  <span>Frontend: Next.js 14 (Port 3000)</span>
-                </p>
-                <p className="flex items-center gap-1.5">
-                  <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                  <span>Backend: Django 5.2 REST (Port 8001)</span>
-                </p>
-                <p className="flex items-center gap-1.5">
-                  <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                  <span>Database: SQLite / PostgreSQL</span>
-                </p>
-                <p className="flex items-center gap-1.5">
-                  <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                  <span>Network Access: 10.118.205.103</span>
-                </p>
-              </div>
-            </div>
+      {/* 5. PRODUCTION WORKFLOW (CLEAN 7-STEP LIFECYCLE) */}
+      <section id="workflow" className="bg-slate-50/50 py-16 border-b border-slate-200">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="mb-10 text-center max-w-xl mx-auto">
+            <h2 className="text-2xl font-bold tracking-tight text-slate-950">
+              Production Lifecycle
+            </h2>
+            <p className="text-sm text-slate-600 mt-1">
+              Standardized seven-stage workshop manufacturing process.
+            </p>
           </div>
 
-          <div className="border-t border-slate-200 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
-            <p>© 2026 Niti Shah Jewels (NSJ ERP). All rights reserved.</p>
-            <p className="font-medium text-slate-600">Designed for Luxury Jewelry Manufacturing & Wholesale</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {[
+              { step: "01", title: "CAD Modeling", desc: "3D CAD modeling and rendering in Rhino & Matrix." },
+              { step: "02", title: "CAM Wax Print", desc: "High-resolution 3D resin wax printing." },
+              { step: "03", title: "Tree Casting", desc: "Vacuum induction gold and platinum alloy casting." },
+              { step: "04", title: "Filing & Assembly", desc: "Precision filing, pre-polishing, and component fitting." },
+              { step: "05", title: "Stone Setting", desc: "Microscope prong, pave, and bezel gemstone setting." },
+              { step: "06", title: "Final Polish", desc: "Ultrasonic bath cleaning and rhodium plating." },
+              { step: "07", title: "BIS Hallmarking", desc: "Government laser hallmark verification and final QC." },
+            ].map((st, idx) => (
+              <div
+                key={idx}
+                className="rounded-xl border border-slate-200 bg-white p-4 shadow-2xs"
+              >
+                <div className="text-xs font-mono font-bold text-slate-400">{st.step}</div>
+                <div className="mt-1 text-sm font-semibold text-slate-900">{st.title}</div>
+                <div className="mt-1 text-xs text-slate-600 leading-relaxed">{st.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. MINIMAL WHITE FOOTER */}
+      <footer className="bg-white py-10">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <div className="flex items-center gap-2">
+            <Image
+              src="/logo.png"
+              alt="NSJ ERP"
+              width={22}
+              height={22}
+              className="object-contain"
+            />
+            <span>© 2026 Niti Shah Jewels (NSJ ERP). All rights reserved.</span>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <Link href="/login" className="hover:text-slate-900 transition-colors">
+              Sign In
+            </Link>
+            <Link href="/register" className="hover:text-slate-900 transition-colors">
+              Sign Up
+            </Link>
+            <button
+              onClick={handleOpenChat}
+              className="hover:text-slate-900 transition-colors cursor-pointer"
+            >
+              Assistant
+            </button>
           </div>
         </div>
       </footer>
