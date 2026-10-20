@@ -308,21 +308,21 @@ You can ask me to:
             </div>
           </div>
 
-          {/* Quick Shortcuts Bar */}
-          <div className="flex items-center gap-1.5 overflow-x-auto px-3 py-2 bg-slate-50 border-b border-slate-200 text-xs scrollbar-none">
+          {/* Quick Shortcuts Bar - Clean Flex Wrap (No Horizontal Scrollbar) */}
+          <div className="flex flex-wrap items-center gap-1.5 px-3 py-2 bg-slate-50 border-b border-slate-200 text-xs overflow-x-hidden">
             {quickShortcuts.map((s, idx) => (
               <button
                 key={idx}
                 onClick={() => sendQuery(s.query)}
-                className="whitespace-nowrap rounded-md bg-white hover:bg-slate-100 border border-slate-200 px-2.5 py-1 text-slate-700 font-medium transition-colors shadow-2xs"
+                className="rounded-md bg-white hover:bg-slate-100 border border-slate-200 px-2 py-1 text-slate-700 text-[11px] font-medium transition-colors shadow-2xs"
               >
                 <span>{s.label}</span>
               </button>
             ))}
           </div>
 
-          {/* Messages Container */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-white">
+          {/* Messages Container - No Horizontal Scrollbar */}
+          <div className="flex-1 overflow-y-auto overflow-x-hidden p-4 space-y-3 bg-white">
             {messages.map((message) => (
               <div
                 key={message.id}
@@ -345,7 +345,7 @@ You can ask me to:
 
                 <div
                   className={cn(
-                    "max-w-[85%] rounded-xl px-3.5 py-2.5 text-xs sm:text-sm leading-relaxed",
+                    "max-w-[85%] rounded-xl px-3.5 py-2.5 text-xs sm:text-sm leading-relaxed break-words overflow-hidden",
                     message.type === "user"
                       ? "bg-slate-900 text-white"
                       : "bg-slate-50 text-slate-900 border border-slate-200"
@@ -433,7 +433,7 @@ You can ask me to:
           </div>
 
           {/* Bottom Input Area */}
-          <div className="border-t border-slate-200 bg-white p-3">
+          <div className="border-t border-slate-200 bg-white p-3 overflow-x-hidden">
             <form
               onSubmit={(e) => {
                 e.preventDefault();

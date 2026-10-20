@@ -77,13 +77,13 @@ export default function LoginPage() {
             <div className="flex flex-col items-center gap-3">
               <Image
                 src="/logo.png"
-                alt="Niti Shah Jewels"
+                alt="NSJ ERP"
                 width={56}
                 height={56}
                 className="rounded-md object-cover"
               />
               <p className="text-lg font-semibold tracking-wide text-primary">
-                NITI SHAH JEWELS <br />
+                NSJ ERP
               </p>
             </div>
             <div className="mt-4 text-center">

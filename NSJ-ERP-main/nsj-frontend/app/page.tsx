@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useAuth } from "@/lib/auth";
@@ -8,8 +7,6 @@ import {
   ArrowRight,
   LogIn,
   UserPlus,
-  Check,
-  Copy,
   Factory,
   Gem,
   FileSpreadsheet,
@@ -20,13 +17,6 @@ import {
 
 export default function HomePage() {
   const { user, loading } = useAuth();
-  const [copiedKey, setCopiedKey] = useState<string | null>(null);
-
-  const handleCopy = (text: string, key: string) => {
-    navigator.clipboard.writeText(text);
-    setCopiedKey(key);
-    setTimeout(() => setCopiedKey(null), 2000);
-  };
 
   const handleOpenChat = () => {
     const chatBtn = document.querySelector(
@@ -42,7 +32,7 @@ export default function HomePage() {
       {/* 1. MINIMAL WHITE HEADER */}
       <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur-xs">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-          {/* Brand */}
+          {/* Brand - "NSJ ERP" (Clean, no "Niti" in header) */}
           <Link href="/" className="flex items-center gap-3">
             <div className="relative flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white p-1">
               <Image
@@ -56,9 +46,9 @@ export default function HomePage() {
             </div>
             <div>
               <span className="text-base font-bold tracking-tight text-slate-900">
-                Niti Shah Jewels
+                NSJ ERP
               </span>
-              <span className="text-xs text-slate-500 block -mt-0.5">ERP System</span>
+              <span className="text-xs text-slate-500 block -mt-0.5">Enterprise System</span>
             </div>
           </Link>
 
@@ -81,38 +71,37 @@ export default function HomePage() {
             </button>
           </nav>
 
-          {/* Auth Action Buttons */}
-          <div className="flex items-center gap-3">
+          {/* Header Action: Dashboard button (clicking opens Sign In page if not logged in) */}
+          <div className="flex items-center gap-2 sm:gap-3">
             {loading ? (
-              <div className="h-8 w-20 rounded bg-slate-100 animate-pulse" />
-            ) : user ? (
-              <div className="flex items-center gap-3">
-                <span className="hidden sm:inline-block text-xs text-slate-600">
-                  {user.name || user.email}
-                </span>
+              <div className="h-8 w-24 rounded bg-slate-100 animate-pulse" />
+            ) : (
+              <>
                 <Link
-                  href="/dashboard"
-                  className="flex items-center gap-1.5 rounded-lg bg-slate-900 px-4 py-2 text-xs sm:text-sm font-medium text-white hover:bg-slate-800 transition-colors"
+                  href={user ? "/dashboard" : "/login"}
+                  className="flex items-center gap-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 px-4 py-1.5 text-xs sm:text-sm font-medium text-white transition-colors shadow-xs"
                 >
                   <span>Dashboard</span>
-                  <ArrowRight className="h-4 w-4" />
+                  <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
-              </div>
-            ) : (
-              <div className="flex items-center gap-2">
-                <Link
-                  href="/login"
-                  className="rounded-lg border border-slate-300 bg-white hover:bg-slate-50 px-3.5 py-1.5 text-xs sm:text-sm font-medium text-slate-700 transition-colors"
-                >
-                  Sign In
-                </Link>
-                <Link
-                  href="/register"
-                  className="rounded-lg bg-slate-900 hover:bg-slate-800 px-4 py-1.5 text-xs sm:text-sm font-medium text-white transition-colors"
-                >
-                  Sign Up
-                </Link>
-              </div>
+
+                {!user && (
+                  <>
+                    <Link
+                      href="/login"
+                      className="hidden sm:inline-flex rounded-lg border border-slate-300 bg-white hover:bg-slate-50 px-3 py-1.5 text-xs sm:text-sm font-medium text-slate-700 transition-colors"
+                    >
+                      Sign In
+                    </Link>
+                    <Link
+                      href="/register"
+                      className="rounded-lg border border-slate-300 bg-white hover:bg-slate-50 px-3 py-1.5 text-xs sm:text-sm font-medium text-slate-700 transition-colors"
+                    >
+                      Sign Up
+                    </Link>
+                  </>
+                )}
+              </>
             )}
           </div>
         </div>
@@ -129,14 +118,22 @@ export default function HomePage() {
             gold bullion accounting, and customer order fulfillment.
           </p>
 
-          {/* Call to Actions */}
+          {/* Action Buttons: Click Dashboard to open Sign In page (or direct dashboard if authenticated) */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
               href={user ? "/dashboard" : "/login"}
-              className="flex items-center gap-2 rounded-lg bg-slate-900 hover:bg-slate-800 px-5 py-2.5 text-sm font-medium text-white transition-colors shadow-2xs"
+              className="flex items-center gap-2 rounded-lg bg-slate-900 hover:bg-slate-800 px-6 py-2.5 text-sm font-medium text-white transition-colors shadow-2xs"
+            >
+              <span>Dashboard</span>
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+
+            <Link
+              href="/login"
+              className="flex items-center gap-2 rounded-lg border border-slate-300 bg-white hover:bg-slate-50 px-5 py-2.5 text-sm font-medium text-slate-700 transition-colors"
             >
               <LogIn className="h-4 w-4" />
-              <span>{user ? "Open Dashboard" : "Sign In to ERP"}</span>
+              <span>Sign In</span>
             </Link>
 
             <Link
@@ -144,62 +141,8 @@ export default function HomePage() {
               className="flex items-center gap-2 rounded-lg border border-slate-300 bg-white hover:bg-slate-50 px-5 py-2.5 text-sm font-medium text-slate-700 transition-colors"
             >
               <UserPlus className="h-4 w-4" />
-              <span>Create Account</span>
+              <span>Sign Up</span>
             </Link>
-          </div>
-
-          {/* Quick Access Credentials Box */}
-          <div className="mx-auto mt-12 max-w-xl rounded-xl border border-slate-200 bg-slate-50/60 p-4 text-left">
-            <div className="flex items-center justify-between pb-2 mb-3 border-b border-slate-200">
-              <span className="text-xs font-semibold text-slate-800">
-                Default Access Credentials
-              </span>
-              <span className="text-[11px] text-slate-500">Tap to copy</span>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-              {/* Founder */}
-              <div
-                onClick={() => handleCopy("niti@nsj.com", "founder")}
-                className="cursor-pointer rounded-lg border border-slate-200 bg-white p-3 hover:border-slate-300 transition-colors"
-              >
-                <div className="flex items-center justify-between text-slate-900 font-medium">
-                  <span>Founder Account</span>
-                  {copiedKey === "founder" ? (
-                    <span className="text-[11px] text-emerald-600 font-semibold flex items-center gap-1">
-                      <Check className="h-3 w-3" /> Copied
-                    </span>
-                  ) : (
-                    <Copy className="h-3 w-3 text-slate-400" />
-                  )}
-                </div>
-                <div className="mt-1.5 text-slate-600 space-y-0.5 font-mono text-[11px]">
-                  <p>Email: <span className="text-slate-900 font-semibold">niti@nsj.com</span></p>
-                  <p>Password: <span className="text-slate-900 font-semibold">admin123</span></p>
-                </div>
-              </div>
-
-              {/* Superuser */}
-              <div
-                onClick={() => handleCopy("admin123@gmail.com", "superuser")}
-                className="cursor-pointer rounded-lg border border-slate-200 bg-white p-3 hover:border-slate-300 transition-colors"
-              >
-                <div className="flex items-center justify-between text-slate-900 font-medium">
-                  <span>Administrator</span>
-                  {copiedKey === "superuser" ? (
-                    <span className="text-[11px] text-emerald-600 font-semibold flex items-center gap-1">
-                      <Check className="h-3 w-3" /> Copied
-                    </span>
-                  ) : (
-                    <Copy className="h-3 w-3 text-slate-400" />
-                  )}
-                </div>
-                <div className="mt-1.5 text-slate-600 space-y-0.5 font-mono text-[11px]">
-                  <p>Email: <span className="text-slate-900 font-semibold">admin123@gmail.com</span></p>
-                  <p>Password: <span className="text-slate-900 font-semibold">admin123</span></p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -346,10 +289,16 @@ export default function HomePage() {
               height={22}
               className="object-contain"
             />
-            <span>© 2026 Niti Shah Jewels (NSJ ERP). All rights reserved.</span>
+            <span>© 2026 NSJ ERP. All rights reserved.</span>
           </div>
 
           <div className="flex items-center gap-4">
+            <Link
+              href={user ? "/dashboard" : "/login"}
+              className="hover:text-slate-900 transition-colors"
+            >
+              Dashboard
+            </Link>
             <Link href="/login" className="hover:text-slate-900 transition-colors">
               Sign In
             </Link>
