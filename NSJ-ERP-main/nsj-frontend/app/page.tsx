@@ -5,8 +5,6 @@ import Link from "next/link";
 import { useAuth } from "@/lib/auth";
 import {
   ArrowRight,
-  LogIn,
-  UserPlus,
   Factory,
   Gem,
   FileSpreadsheet,
@@ -32,7 +30,7 @@ export default function HomePage() {
       {/* 1. MINIMAL WHITE HEADER */}
       <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur-xs">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-          {/* Brand - "NSJ ERP" (Clean, no "Niti" in header) */}
+          {/* Brand */}
           <Link href="/" className="flex items-center gap-3">
             <div className="relative flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white p-1">
               <Image
@@ -71,37 +69,18 @@ export default function HomePage() {
             </button>
           </nav>
 
-          {/* Header Action: Dashboard button (clicking opens Sign In page if not logged in) */}
+          {/* Header Action: Dashboard button only (routes to /login if not authenticated) */}
           <div className="flex items-center gap-2 sm:gap-3">
             {loading ? (
               <div className="h-8 w-24 rounded bg-slate-100 animate-pulse" />
             ) : (
-              <>
-                <Link
-                  href={user ? "/dashboard" : "/login"}
-                  className="flex items-center gap-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 px-4 py-1.5 text-xs sm:text-sm font-medium text-white transition-colors shadow-xs"
-                >
-                  <span>Dashboard</span>
-                  <ArrowRight className="h-3.5 w-3.5" />
-                </Link>
-
-                {!user && (
-                  <>
-                    <Link
-                      href="/login"
-                      className="hidden sm:inline-flex rounded-lg border border-slate-300 bg-white hover:bg-slate-50 px-3 py-1.5 text-xs sm:text-sm font-medium text-slate-700 transition-colors"
-                    >
-                      Sign In
-                    </Link>
-                    <Link
-                      href="/register"
-                      className="rounded-lg border border-slate-300 bg-white hover:bg-slate-50 px-3 py-1.5 text-xs sm:text-sm font-medium text-slate-700 transition-colors"
-                    >
-                      Sign Up
-                    </Link>
-                  </>
-                )}
-              </>
+              <Link
+                href={user ? "/dashboard" : "/login"}
+                className="flex items-center gap-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 px-4 py-1.5 text-xs sm:text-sm font-medium text-white transition-colors shadow-xs"
+              >
+                <span>Dashboard</span>
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
             )}
           </div>
         </div>
@@ -118,30 +97,14 @@ export default function HomePage() {
             gold bullion accounting, and customer order fulfillment.
           </p>
 
-          {/* Action Buttons: Click Dashboard to open Sign In page (or direct dashboard if authenticated) */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          {/* Action: Single Dashboard button (routes to /login if not logged in) */}
+          <div className="mt-8 flex items-center justify-center">
             <Link
               href={user ? "/dashboard" : "/login"}
               className="flex items-center gap-2 rounded-lg bg-slate-900 hover:bg-slate-800 px-6 py-2.5 text-sm font-medium text-white transition-colors shadow-2xs"
             >
               <span>Dashboard</span>
               <ArrowRight className="h-4 w-4" />
-            </Link>
-
-            <Link
-              href="/login"
-              className="flex items-center gap-2 rounded-lg border border-slate-300 bg-white hover:bg-slate-50 px-5 py-2.5 text-sm font-medium text-slate-700 transition-colors"
-            >
-              <LogIn className="h-4 w-4" />
-              <span>Sign In</span>
-            </Link>
-
-            <Link
-              href="/register"
-              className="flex items-center gap-2 rounded-lg border border-slate-300 bg-white hover:bg-slate-50 px-5 py-2.5 text-sm font-medium text-slate-700 transition-colors"
-            >
-              <UserPlus className="h-4 w-4" />
-              <span>Sign Up</span>
             </Link>
           </div>
         </div>
@@ -292,18 +255,12 @@ export default function HomePage() {
             <span>© 2026 NSJ ERP. All rights reserved.</span>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-6">
             <Link
               href={user ? "/dashboard" : "/login"}
               className="hover:text-slate-900 transition-colors"
             >
               Dashboard
-            </Link>
-            <Link href="/login" className="hover:text-slate-900 transition-colors">
-              Sign In
-            </Link>
-            <Link href="/register" className="hover:text-slate-900 transition-colors">
-              Sign Up
             </Link>
             <button
               onClick={handleOpenChat}
