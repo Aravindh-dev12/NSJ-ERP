@@ -15,10 +15,12 @@ import { Toaster } from "@/components/ui/toaster";
 import { LayoutContent } from "@/components/LayoutContent";
 
 export const metadata: Metadata = {
-  title: "Spark",
-  description: "Production-grade Next.js frontend with FastAPI backend",
+  title: "NSJ ERP - Jewelry Management System",
+  description: "Enterprise Resource Planning for Jewelry Businesses",
+  manifest: "/manifest.json",
   icons: {
     icon: "/logo.png",
+    apple: "/logo.png",
   },
 };
 

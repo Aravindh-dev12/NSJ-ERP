@@ -91,6 +91,68 @@ def login_view(request):
     )
 
 
+@csrf_exempt
+@require_http_methods(["POST", "OPTIONS"])
+def register_view(request):
+    """
+    POST /api/auth/register
+    body: { "name": "John Doe", "email": "john@example.com", "password": "password123", "department": "ACCOUNTS" }
+    Creates user, returns JWT tokens and logs user in.
+    """
+    if request.method == "OPTIONS":
+        return JsonResponse({"detail": "ok"})
+
+    try:
+        payload = json.loads(request.body or "{}")
+    except json.JSONDecodeError:
+        return JsonResponse({"detail": "Invalid JSON"}, status=400)
+
+    name = (payload.get("name") or "").strip()
+    email = (payload.get("email") or "").strip().lower()
+    password = payload.get("password") or ""
+    department = payload.get("department") or "ACCOUNTS"
+
+    if not email or not password:
+        return JsonResponse({"detail": "Email and password are required"}, status=400)
+
+    if len(password) < 6:
+        return JsonResponse({"detail": "Password must be at least 6 characters"}, status=400)
+
+    if User.objects.filter(email__iexact=email).exists():
+        return JsonResponse({"detail": "A user with this email already exists"}, status=400)
+
+    username = email.split("@")[0]
+    base_username = username
+    counter = 1
+    while User.objects.filter(username=username).exists():
+        username = f"{base_username}{counter}"
+        counter += 1
+
+    user = User.objects.create_user(
+        email=email,
+        username=username,
+        password=password,
+        name=name or username.title(),
+        role="EMPLOYEE",
+        department=department,
+    )
+
+    refresh = RefreshToken.for_user(user)
+    access_token = str(refresh.access_token)
+    refresh_token = str(refresh)
+    login(request, user)
+
+    return JsonResponse(
+        {
+            "message": "account created successfully",
+            "access_token": access_token,
+            "refresh_token": refresh_token,
+            "user": {"id": str(user.id), "email": user.email, "name": user.name},
+        },
+        status=201,
+    )
+
+
 @api_view(["GET"])
 @authentication_classes([JWTAuthentication, CsrfExemptSessionAuthentication])
 @permission_classes([IsAuthenticated])

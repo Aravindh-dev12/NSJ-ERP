@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NSJ ERP</string>
+    <string name="server_url">http://10.118.205.103:3000</string>
+</resources>

@@ -41,6 +41,7 @@ async function handler(
   const noTrailingSlashPaths = [
     "/api/auth/csrf",
     "/api/auth/login",
+    "/api/auth/register",
     "/api/auth/refresh",
     "/api/auth/me",
     "/api/auth/logout",
@@ -48,6 +49,8 @@ async function handler(
   ];
   if (noTrailingSlashPaths.includes(targetPath.replace(/\/$/, ""))) {
     targetPath = targetPath.replace(/\/$/, "");
+  } else if (!targetPath.endsWith("/")) {
+    targetPath = targetPath + "/";
   }
 
   // Preserve query string
@@ -55,12 +58,13 @@ async function handler(
   const qs = url.search; // includes leading "?"
 
   const targetUrl = `${backendOrigin}${targetPath}${qs}`;
+  console.log("[PROXY] Forwarding " + req.method + " to " + targetUrl);
 
   // Build headers – forward everything except host
   const headers = new Headers();
   req.headers.forEach((value, key) => {
     const lower = key.toLowerCase();
-    if (lower === "host" || lower === "connection") return;
+    if (["host", "connection", "content-length", "transfer-encoding", "keep-alive", "expect"].includes(lower)) return;
     headers.set(key, value);
   });
 
@@ -74,12 +78,14 @@ async function handler(
   const init: RequestInit = {
     method: req.method,
     headers,
-    duplex: "half",
   };
 
-  // Forward body for non-GET/HEAD requests via stream
+  // Forward body for non-GET/HEAD requests
   if (req.method !== "GET" && req.method !== "HEAD") {
-    init.body = req.body as any;
+    const bodyBuffer = await req.arrayBuffer();
+    if (bodyBuffer.byteLength > 0) {
+      init.body = bodyBuffer;
+    }
   }
 
   try {

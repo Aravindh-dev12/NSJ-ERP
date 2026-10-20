@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -151,8 +152,17 @@ export default function LoginPage() {
               <Button type="submit" className="w-full" disabled={isLoading}>
                 {isLoading ? "Signing in..." : "Sign In"}
               </Button>
-              <br />
-              <br />
+              <div className="text-center pt-3 pb-1 border-t border-slate-100 mt-4 text-xs text-slate-600">
+                <span>Don't have an account? </span>
+                <Link href="/register" className="font-semibold text-amber-600 hover:text-amber-700 hover:underline">
+                  Sign Up
+                </Link>
+              </div>
+              <div className="text-center pt-1">
+                <Link href="/" className="text-xs text-muted-foreground hover:text-primary transition-colors">
+                  ← Back to Home Page
+                </Link>
+              </div>
             </form>
           </CardContent>
         </Card>

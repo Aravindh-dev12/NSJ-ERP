@@ -1,0 +1,2 @@
+rootProject.name = "NSJ-ERP"
+include ':app'

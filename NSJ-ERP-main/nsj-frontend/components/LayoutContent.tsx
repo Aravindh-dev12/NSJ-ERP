@@ -6,10 +6,12 @@ import { useAuth } from "@/lib/auth";
 import { SidebarNav } from "@/components/SidebarNav";
 import { AIChatWrapper } from "@/components/AIChatWrapper";
 
-// Pages that should not show sidebar and AI chat
+// Pages that should not show sidebar and require no authentication
 const publicPages = [
+  "/",
   "/login",
   "/register",
+  "/signup",
   "/forgot-password",
   "/reset-password",
 ];
@@ -20,9 +22,14 @@ export function LayoutContent({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
 
   // Check if current page is a public page (login, register, etc.)
-  const isPublicPage = publicPages.some(
-    (page) => pathname === page || pathname?.startsWith(page + "/")
-  );
+  const normalizedPath = pathname?.replace(/\/$/, "") || "/";
+  const isPublicPage = publicPages.some((page) => {
+    const cleanPage = page.replace(/\/$/, "") || "/";
+    return (
+      normalizedPath === cleanPage ||
+      (cleanPage !== "/" && normalizedPath.startsWith(cleanPage + "/"))
+    );
+  });
 
   // Redirect to login if not authenticated and not on a public page
   useEffect(() => {
@@ -31,11 +38,12 @@ export function LayoutContent({ children }: { children: React.ReactNode }) {
     }
   }, [loading, user, isPublicPage, router]);
 
-  // On public pages, always show simple layout (no sidebar)
+  // On public pages, always show public layout (no sidebar)
   if (isPublicPage) {
     return (
       <div className="min-h-screen bg-background text-foreground">
         {children}
+        <AIChatWrapper />
       </div>
     );
   }

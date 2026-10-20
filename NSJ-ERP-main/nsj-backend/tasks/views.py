@@ -1092,50 +1092,34 @@ class TaskViewSet(viewsets.ModelViewSet):
         )
 
     # =========================================================================
-    # Natural Language Query Endpoint (Founder Only)
+    # Natural Language Query & AI Automation Endpoint (All Employees)
     # =========================================================================
 
     @action(detail=False, methods=["post"])
     def nlp_query(self, request):
         """
-        Process natural language queries about tasks.
-        Only available to Founder role.
-
-        Request body:
-        {
-            "query": "Who completed most tasks?"
-        }
+        Process natural language queries and automated actions.
+        Available to all authenticated employees and team members.
+        Executes task creations, status transitions, quote calculations,
+        daily standups, bottleneck scans, and analytics.
         """
-        from .nlp_query import NLPQueryProcessor
+        from .ai_automations import AIAutomationEngine
 
         effective_user = self._get_effective_user()
-
-        # Check if user is founder
-        if effective_user:
-            is_founder = (
-                effective_user.task_role == "FOUNDER"
-                or effective_user.name == "Niti"
-                or effective_user.email == "niti@nsj.com"
-            )
-            if not is_founder:
-                from rest_framework.exceptions import PermissionDenied
-
-                raise PermissionDenied("Only founders can use the AI assistant.")
-
         query = request.data.get("query", "").strip()
 
         if not query:
             return Response(
                 {
                     "success": False,
-                    "error": "Please provide a query.",
-                    "answer": "Please ask me a question about your tasks!",
+                    "error": "Please provide an automation query.",
+                    "answer": "How can I assist your workflow today?",
                 },
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
-        company = effective_user.company if effective_user else None
-        processor = NLPQueryProcessor(company=company)
-        result = processor.process_query(query)
+        company = effective_user.company if (effective_user and hasattr(effective_user, "company")) else None
+        engine = AIAutomationEngine(user=effective_user, company=company)
+        result = engine.execute(query)
 
         return Response(result)

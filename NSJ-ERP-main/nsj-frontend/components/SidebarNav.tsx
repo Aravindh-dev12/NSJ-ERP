@@ -238,8 +238,17 @@ export function SidebarNav({
 
   const basePath = pathname ? pathname.split("?")[0] : "";
 
-  // Hide the sidebar on the login page (mobile and desktop)
-  if (basePath === "/login" || basePath.startsWith("/login/")) {
+  // Hide the sidebar on public landing and auth pages
+  if (
+    basePath === "" ||
+    basePath === "/" ||
+    basePath === "/login" ||
+    basePath.startsWith("/login/") ||
+    basePath === "/register" ||
+    basePath.startsWith("/register/") ||
+    basePath === "/signup" ||
+    basePath.startsWith("/signup/")
+  ) {
     return null;
   }
 
